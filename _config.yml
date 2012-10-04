@@ -1,3 +1,27 @@
-baseurl: ~/yangbinblog
+# standard jekyll configuration
+
+permalink: date
+pygments: true
+exclude: ['Rakefile', 'README.md', 'config.rb']
 markdown: rdiscount
-pygments:true
+
+# configuration required for some pages
+
+domain: yangbin.tk
+title: YangBin's Horizon
+author: YangBin
+email: yangbdy@gmail.com
+
+# configuration for ehancements, uncomment to enable
+
+# feedburner:
+#   id: feedburnerid
+
+# google_analytics:
+#   account: UA-XXXXX-X
+
+# github:
+#   username: ghusername
+
+# disqus:
+#   id: disqusid
