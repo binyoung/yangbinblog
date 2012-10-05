@@ -1,4 +1,3 @@
 auto: true
-baseurl: /yangbinblog
 markdown: rdiscount
 pygments: true

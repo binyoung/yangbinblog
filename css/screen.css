@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-  background-color: #004000;
+  background-color: #002000;
   font: 13.34px helvetica, arial, clean, sans-serif;
   font-size: normal;
   text-align: center;
@@ -69,7 +69,7 @@ ul.posts {
   ul.posts span {
     color: #002080;
     font-family: Monaco, "Courier New", monospace;
-    font-size: 100%;
+    font-size: 130%;
   }
 
 /*****************************************************************************/
@@ -79,9 +79,9 @@ ul.posts {
 /*****************************************************************************/
 
 .site {
-  font-size: 110%;
+  font-size: 120%;
   text-align: justify;
-  width: 40em;
+  width: 60em;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
 }
@@ -93,7 +93,7 @@ ul.posts {
 }
 
   .site .title a {
-    color: #a00;
+    color: #80ff20;
     text-decoration: none;
   }
 
@@ -102,7 +102,7 @@ ul.posts {
   }
 
   .site .title a.extra {
-    color: #aaa;
+    color: #60ff80;
     text-decoration: none;
     margin-left: 1em;
   }
