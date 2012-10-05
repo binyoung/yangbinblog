@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>YangBin</title>
+ <link href="http://yangbin.tk/atom.xml" rel="self"/>
+ <link href="http://yangbin.tk/"/>
+ <updated>2012-10-05T09:57:31+08:00</updated>
+ <id>http://yangbin.tk/</id>
+ <author>
+   <name>YangBin</name>
+   <email>yangbdy@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Hello World</title>
+   <link href="http://yangbin.tk/2011/11/22/open-source-everything.html"/>
+   <updated>2011-11-22T00:00:00+08:00</updated>
+   <id>http://yangbin.tk/2011/11/22/open-source-everything</id>
+   <content type="html">&lt;h1&gt;Hello World&lt;/h1&gt;
+
+&lt;p class=&quot;meta&quot;&gt;22 Nov 2011 - San Francisco&lt;/p&gt;
+
+
+&lt;p&gt;Hello world!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
