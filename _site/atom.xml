@@ -4,7 +4,7 @@
  <title>YangBin</title>
  <link href="http://yangbin.tk/atom.xml" rel="self"/>
  <link href="http://yangbin.tk/"/>
- <updated>2012-10-05T13:01:33+08:00</updated>
+ <updated>2012-10-05T21:30:14+08:00</updated>
  <id>http://yangbin.tk/</id>
  <author>
    <name>YangBin</name>
@@ -37,6 +37,19 @@ is a representation of the many-worlds (all possible decoherent causal diamond
 histories) in a single geometry.&lt;/p&gt;
 
 &lt;p&gt;We propose that it must be possible in principle to verify quantum-mechanical predictions exactly. This requires not only the existence of exact observables but two additional postulates: a single observer within the universe can access infinitely many identical experiments; and the outcome of each experiment must be completely definite. In causal diamonds with finite surface area, holographic entropy bounds imply that no exact observables exist, and both postulates fail: experiments cannot be repeated infinitely many times; and decoherence is not completely irreversible, so outcomes are not definite. We argue that our postulates can be satisfied in &quot;hats&quot; (supersymmetric multiverse regions with vanishing cosmological constant). We propose a complementarity principle that relates the approximate observables associated with finite causal diamonds to exact observables in the hat.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>test</title>
+   <link href="http://yangbin.tk/2012/10/05/test.html"/>
+   <updated>2012-10-05T00:00:00+08:00</updated>
+   <id>http://yangbin.tk/2012/10/05/test</id>
+   <content type="html">&lt;h1&gt;this is formula&lt;/h1&gt;
+
+&lt;p&gt;$\exp(-\frac{x&lt;sup&gt;2}{2})$&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;E=m_2 c&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 </content>
  </entry>
  
