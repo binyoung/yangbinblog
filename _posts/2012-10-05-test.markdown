@@ -3,6 +3,10 @@ layout: post
 title: test
 ---
 # this is formula
-$\exp(-\frac{x^2}{2})$
 
-E=m_2 c^2
+$ \frac{ x\^2  }{2} \nabla \cdot \vec{B} = 0 $
+
+*  E=m_2 c^2
+
+
+$ \forall x, y : \mathbb{Z}, x > 3 \land y < 2 \Rightarrow x^2 - 2y > 5 $

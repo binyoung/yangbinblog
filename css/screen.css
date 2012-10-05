@@ -16,8 +16,8 @@ html, body {
 }
 
 body {
-  background-color: #002000;
-  font: 13.34px helvetica, arial, clean, sans-serif;
+  background-color: #eec;
+  font-family: "minion-pro-1", "minion-pro-2", Palatino, Georgia, "Times New Roman", serif;helvetica, arial, clean, sans-serif;
   font-size: normal;
   text-align: center;
 }
@@ -79,11 +79,12 @@ ul.posts {
 /*****************************************************************************/
 
 .site {
-  font-size: 120%;
+  font-size: 110%;
   text-align: justify;
-  width: 55em;
+  width: 45em;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
+  color: black;
 }
 
 .title {
@@ -93,16 +94,17 @@ ul.posts {
 }
 
   .site .title a {
-    color: #80ff20;
-    text-decoration: none;
+    font-size: 200%;
+    color: black;
+    text-decoration: underline;
   }
 
   .site .title a:hover {
-    color: black;
+    color: green;
   }
 
   .site .title a.extra {
-    color: #60ff80;
+    color: #208000;
     text-decoration: none;
     margin-left: 1em;
   }

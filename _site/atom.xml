@@ -4,7 +4,7 @@
  <title>YangBin</title>
  <link href="http://yangbin.tk/atom.xml" rel="self"/>
  <link href="http://yangbin.tk/"/>
- <updated>2012-10-05T21:30:14+08:00</updated>
+ <updated>2012-10-05T23:32:28+08:00</updated>
  <id>http://yangbin.tk/</id>
  <author>
    <name>YangBin</name>
@@ -17,27 +17,13 @@
    <link href="http://yangbin.tk/2012/10/05/warp.html"/>
    <updated>2012-10-05T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2012/10/05/warp</id>
-   <content type="html">&lt;h1&gt;world&lt;/h1&gt;
+   <content type="html">&lt;h1 id='world'&gt;world&lt;/h1&gt;
+&lt;p class='meta'&gt;Oct 05 2012 - Shanghai&lt;/p&gt;
+&lt;p&gt;量子力学的多世界解释一直是个充满兴趣的问题。为数不少的物理学家相信多世界解释。今 天高人Raphael Bousso和Leonard Susskind在arXiv上贴了一篇文章：&lt;/p&gt;
 
-&lt;p class=&quot;meta&quot;&gt;Oct 05 2012 - Shanghai&lt;/p&gt;
+&lt;p&gt;We argue that the many-worlds of quantum mechanics and the many worlds of the multiverse are the same thing, and that the multiverse is necessary to give exact operational meaning to probabilistic predictions from quantum mechanics. Decoherence - the modern version of wave-function collapse - is subjective in that it depends on the choice of a set of unmonitored degrees of freedom, the &amp;#8220;environment&amp;#8221;. In fact decoherence is absent in the complete description of any region larger than the future light-cone of a measurement event. However, if one restricts to the causal diamond - the largest region that can be causally probed - then the boundary of the diamond acts as a one-way membrane and thus provides a preferred choice of environment. We argue that the global multiverse is a representation of the many-worlds (all possible decoherent causal diamond histories) in a single geometry.&lt;/p&gt;
 
-
-&lt;p&gt;量子力学的多世界解释一直是个充满兴趣的问题。为数不少的物理学家相信多世界解释。今
-天高人Raphael Bousso和Leonard Susskind在arXiv上贴了一篇文章：&lt;/p&gt;
-
-&lt;p&gt;We argue that the many-worlds of quantum mechanics and the many worlds of the multiverse are the same thing, and that the multiverse is necessary to give exact operational meaning to probabilistic predictions from quantum mechanics.
-Decoherence - the modern version of wave-function collapse - is subjective in
-that it depends on the choice of a set of unmonitored degrees of freedom, the
-&quot;environment&quot;. In fact decoherence is absent in the complete description of any
-region larger than the future light-cone of a measurement event. However, if one
-restricts to the causal diamond - the largest region that can be causally
-probed - then the boundary of the diamond acts as a one-way membrane and thus
-provides a preferred choice of environment. We argue that the global multiverse
-is a representation of the many-worlds (all possible decoherent causal diamond
-histories) in a single geometry.&lt;/p&gt;
-
-&lt;p&gt;We propose that it must be possible in principle to verify quantum-mechanical predictions exactly. This requires not only the existence of exact observables but two additional postulates: a single observer within the universe can access infinitely many identical experiments; and the outcome of each experiment must be completely definite. In causal diamonds with finite surface area, holographic entropy bounds imply that no exact observables exist, and both postulates fail: experiments cannot be repeated infinitely many times; and decoherence is not completely irreversible, so outcomes are not definite. We argue that our postulates can be satisfied in &quot;hats&quot; (supersymmetric multiverse regions with vanishing cosmological constant). We propose a complementarity principle that relates the approximate observables associated with finite causal diamonds to exact observables in the hat.&lt;/p&gt;
-</content>
+&lt;p&gt;We propose that it must be possible in principle to verify quantum-mechanical predictions exactly. This requires not only the existence of exact observables but two additional postulates: a single observer within the universe can access infinitely many identical experiments; and the outcome of each experiment must be completely definite. In causal diamonds with finite surface area, holographic entropy bounds imply that no exact observables exist, and both postulates fail: experiments cannot be repeated infinitely many times; and decoherence is not completely irreversible, so outcomes are not definite. We argue that our postulates can be satisfied in &amp;#8220;hats&amp;#8221; (supersymmetric multiverse regions with vanishing cosmological constant). We propose a complementarity principle that relates the approximate observables associated with finite causal diamonds to exact observables in the hat.&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -45,12 +31,15 @@ histories) in a single geometry.&lt;/p&gt;
    <link href="http://yangbin.tk/2012/10/05/test.html"/>
    <updated>2012-10-05T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2012/10/05/test</id>
-   <content type="html">&lt;h1&gt;this is formula&lt;/h1&gt;
+   <content type="html">&lt;h1 id='this_is_formula'&gt;this is formula&lt;/h1&gt;
 
-&lt;p&gt;$\exp(-\frac{x&lt;sup&gt;2}{2})$&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;$ \frac{ x\^2 }{2} \nabla \cdot \vec{B} = 0 $&lt;/p&gt;
 
-&lt;p&gt;E=m_2 c&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
-</content>
+&lt;ul&gt;
+&lt;li&gt;E=m_2 c^2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$ \forall x, y : \mathbb{Z}, x &amp;gt; 3 \land y &amp;lt; 2 \Rightarrow x^2 - 2y &amp;gt; 5 $&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -58,13 +47,9 @@ histories) in a single geometry.&lt;/p&gt;
    <link href="http://yangbin.tk/2011/11/22/open-source-everything.html"/>
    <updated>2011-11-22T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2011/11/22/open-source-everything</id>
-   <content type="html">&lt;h1&gt;Hello World&lt;/h1&gt;
-
-&lt;p class=&quot;meta&quot;&gt;Oct05 2012 - Shanghai&lt;/p&gt;
-
-
-&lt;p&gt;Hello world!&lt;/p&gt;
-</content>
+   <content type="html">&lt;h1 id='hello_world'&gt;Hello World&lt;/h1&gt;
+&lt;p class='meta'&gt;Oct05 2012 - Shanghai&lt;/p&gt;
+&lt;p&gt;Hello world!&lt;/p&gt;</content>
  </entry>
  
  
