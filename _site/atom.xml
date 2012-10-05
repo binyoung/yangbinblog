@@ -4,7 +4,7 @@
  <title>YangBin</title>
  <link href="http://yangbin.tk/atom.xml" rel="self"/>
  <link href="http://yangbin.tk/"/>
- <updated>2012-10-05T23:32:28+08:00</updated>
+ <updated>2012-10-06T01:12:36+08:00</updated>
  <id>http://yangbin.tk/</id>
  <author>
    <name>YangBin</name>
@@ -27,29 +27,23 @@
  </entry>
  
  <entry>
-   <title>test</title>
+   <title>计算广义相对论的Mathmatica包</title>
    <link href="http://yangbin.tk/2012/10/05/test.html"/>
    <updated>2012-10-05T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2012/10/05/test</id>
-   <content type="html">&lt;h1 id='this_is_formula'&gt;this is formula&lt;/h1&gt;
-
-&lt;p&gt;$ \frac{ x\^2 }{2} \nabla \cdot \vec{B} = 0 $&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;E=m_2 c^2&lt;/li&gt;
+   <content type="html">&lt;ul&gt;
+&lt;li&gt;GR 使用符号计算软件Mathmatica计算广义相对论的包有很多中, 最知名的如&lt;a href='http://grtensor.phy.queensu.ca/'&gt;GRTensor&lt;/a&gt;. 但是我觉得这些包都不是很趁手, 因为就我个人而言, 这些包中很多功能我实际上用不到.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;$ \forall x, y : \mathbb{Z}, x &amp;gt; 3 \land y &amp;lt; 2 \Rightarrow x^2 - 2y &amp;gt; 5 $&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>Hello World</title>
-   <link href="http://yangbin.tk/2011/11/22/open-source-everything.html"/>
-   <updated>2011-11-22T00:00:00+08:00</updated>
-   <id>http://yangbin.tk/2011/11/22/open-source-everything</id>
-   <content type="html">&lt;h1 id='hello_world'&gt;Hello World&lt;/h1&gt;
-&lt;p class='meta'&gt;Oct05 2012 - Shanghai&lt;/p&gt;
-&lt;p&gt;Hello world!&lt;/p&gt;</content>
+&lt;p&gt;所以我自己写了一个只有七个函数的简单包&lt;a href='https://files.dropbox.com/u/36755974/GR.m'&gt;GR&lt;/a&gt;, 可以计算Einstein张量, 克里斯多菲尔记号, 外尔张量等. 您可以随便改动或传播这个包, 不用注明出处. 需要提到的是, 这个包并非完全由我原创, 我是在看了James.Hartle的名著&lt;a href='http://web.physics.ucsb.edu/~hartle'&gt;Gravity: An Introduction to Einstein&amp;#8217;s General Relativity&lt;/a&gt;中附加的代码后, 将其封装成包. 当然如果您觉着好用, 感谢Hartle老先生好了, 譬如买他一本书.&lt;/p&gt;
+
+&lt;p&gt;* 使用方法&lt;/p&gt;
+
+&lt;p&gt;使用说明: 以Vaidya黑洞为例.&lt;/p&gt;
+
+&lt;p&gt;$$ds^{2}=-2f(u,v)dudv+r^{2}(u,v)d^{2}\Omega^{2}$$ 比如计算其Einstein张量:&lt;/p&gt;
+
+&lt;p&gt;$$Einstein[{0,-f[u,v],0,0},{-f[u,v],0,0,0},{0,0,r[u,v]^2,0},{0,0,0,r[u,v]^2Sin[\theta]^2},{u,v,\theta ,\phi}]$$.&lt;/p&gt;</content>
  </entry>
  
  

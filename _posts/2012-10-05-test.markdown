@@ -1,12 +1,17 @@
 ---
 layout: post
-title: test
+title: 计算广义相对论的Mathmatica包
 ---
-# this is formula
+* GR
+使用符号计算软件Mathmatica计算广义相对论的包有很多中, 最知名的如[GRTensor](http://grtensor.phy.queensu.ca/). 但是我觉得这些包都不是很趁手, 因为就我个人而言, 这些包中很多功能我实际上用不到.
 
-$ \frac{ x\^2  }{2} \nabla \cdot \vec{B} = 0 $
+所以我自己写了一个只有七个函数的简单包[GR](https://files.dropbox.com/u/36755974/GR.m), 可以计算Einstein张量, 克里斯多菲尔记号, 外尔张量等. 您可以随便改动或传播这个包, 不用注明出处. 需要提到的是, 这个包并非完全由我原创, 我是在看了James.Hartle的名著[Gravity: An Introduction to Einstein's General Relativity](http://web.physics.ucsb.edu/~hartle)中附加的代码后, 将其封装成包. 当然如果您觉着好用, 感谢Hartle老先生好了, 譬如买他一本书.
 
-*  E=m_2 c^2
+* 使用方法
 
+使用说明: 以Vaidya黑洞为例.
 
-$ \forall x, y : \mathbb{Z}, x > 3 \land y < 2 \Rightarrow x^2 - 2y > 5 $
+$$ds^{2}=-2f(u,v)dudv+r^{2}(u,v)d^{2}\Omega^{2}$$
+比如计算其Einstein张量:
+
+$$Einstein\[\{0,-f\[u,v\],0,0\},\{-f\[u,v\],0,0,0\},\{0,0,r\[u,v\]^2,0\},\{0,0,0,r\[u,v\]^2Sin\[\theta\]^2\},\{u,v,\theta ,\phi\}\]$$.
