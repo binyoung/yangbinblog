@@ -4,7 +4,7 @@
  <title>YangBin</title>
  <link href="http://yangbin.tk/atom.xml" rel="self"/>
  <link href="http://yangbin.tk/"/>
- <updated>2012-10-06T12:18:35+08:00</updated>
+ <updated>2012-10-07T17:36:18+08:00</updated>
  <id>http://yangbin.tk/</id>
  <author>
    <name>YangBin</name>
@@ -13,143 +13,958 @@
 
  
  <entry>
-   <title>追寻Higgs粒子</title>
-   <link href="http://yangbin.tk/2012/10/06/higgs.html"/>
-   <updated>2012-10-06T00:00:00+08:00</updated>
-   <id>http://yangbin.tk/2012/10/06/higgs</id>
-   <content type="html">&lt;h1 id='_1'&gt;前言 (1)&lt;/h1&gt;
+   <title>Monte Method Pi</title>
+   <link href="http://yangbin.tk/2012/04/12/Monte-method-Pi.html"/>
+   <updated>2012-04-12T00:00:00+08:00</updated>
+   <id>http://yangbin.tk/2012/04/12/Monte-method-Pi</id>
+   <content type="html">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+               &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+lang=&quot;en&quot; xml:lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;title&gt;蒙特卡罗法计算Pi&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;Org-mode&quot;/&gt;
+&lt;meta name=&quot;generated&quot; content=&quot;2012-10-07 17:31:12 CST&quot;/&gt;
+&lt;meta name=&quot;author&quot; content=&quot;杨彬&quot;/&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&quot;/&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot;/&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+ &lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]&gt;*/--&gt;
+&lt;/style&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = &quot;code-highlighted&quot;;
+     elem.className   = &quot;code-highlighted&quot;;
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]&gt;*///--&gt;
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://orgmode.org/mathjax/MathJax.js&quot;&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: [&quot;MMLorHTML.js&quot;], jax: [&quot;input/TeX&quot;],
+            jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+        extensions: [&quot;tex2jax.js&quot;,&quot;TeX/AMSmath.js&quot;,&quot;TeX/AMSsymbols.js&quot;,
+                     &quot;TeX/noUndefined.js&quot;],
+        tex2jax: {
+            inlineMath: [ [&quot;\\(&quot;,&quot;\\)&quot;] ],
+            displayMath: [ ['$$','$$'], [&quot;\\[&quot;,&quot;\\]&quot;] ],
+            skipTags: [&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;],
+            ignoreClass: &quot;tex2jax_ignore&quot;,
+            processEscapes: false,
+            processEnvironments: true,
+            preview: &quot;TeX&quot;
+        },
+        showProcessingMessages: true,
+        displayAlign: &quot;center&quot;,
+        displayIndent: &quot;2em&quot;,
 
-&lt;p&gt;上世纪四十年代末，基于量子场论的量子电动力学的成功使基本粒子物理进入了一段迅速发展时期。然而很快整个领域便遇到了难以逾越的困难。1951年Kamefuchi 指出：弱相互作用的四费米子相互作用理论是不可重整化的。四费米子理论在最低阶近似下是没问题的，但是在下一阶近似下遇到了无法消除的无穷大。强相互作用中的问题与此不同。原则上 $\pi$ 介子和核子间的Yukawa耦合在形式上是可重整化的(它的耦合常数是无量纲的)，然而由于相互作用很强使微扰方法无用武之地，因此无法用这些理论做实际计算。当时的弱相互作用和强相互作用理论的一个深层次问题是：这些理论都没有合理的理论基础，仅是非常唯象的理论。当时的弱相互作用理论仅仅是为了拟合当时的实验数据拼凑起来的，而强相互作用也缺乏赖以导出的第一性原理。同时Landau等人指出除了非相互作用粒子外，定域场论似乎无解，并且在有限的能量标度，跑动耦合常数趋于无穷，这即是著名的Landau极点(Landau pole)。这导致当时很多物理学家对为研究基本粒子物理而发展起来的量子场论丧失了信心。&lt;/p&gt;
+        &quot;HTML-CSS&quot;: {
+             scale: 100,
+             availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;],
+             preferredFont: &quot;TeX&quot;,
+             webFont: &quot;TeX&quot;,
+             imageFont: &quot;TeX&quot;,
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    &quot;MML&quot;,
+                 Firefox: &quot;MML&quot;,
+                 Opera:   &quot;HTML&quot;,
+                 other:   &quot;HTML&quot;
+             }
+        }
+    });
+/*]]&gt;*///--&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;content&quot;&gt;
 
-&lt;p&gt;这期间产生的三个杰出的思想带领量子场论走出了困境，并奠定了今天粒子物理的基础。这些思想分别是：夸克模型、定域规范对称性、对称性自发破缺。规范不变性的思想最早来自H.Weyl企图在几何上统一电磁相互作用和引力相互作用的不成功尝试。1954年杨振宁和Mills为了解释强相互作用，类比电磁相互作用的$U(1)$对称性，考虑同位旋守恒的$SU(2)$对称性。 在Yang-Mills理论中，强相互作用中与电荷类似的“荷”是同位旋，而与光子类似的是三维矢量规范玻色子。$SU(2)$定域规范对称性与$U(1)$极为不同，$SU(2)$群是非阿贝尔群，因此规范“荷”是非对易的，并且规范玻色子之间存在自相互作用，这个理论是非线性的。 Yang-Mills理论的另一个重要性在于它给出了一个确定基本粒子的耦合方式的原理。尽管Yang-Mills 理论简单优美，但它很明显并不可能是强相互作用的理论。 因为正如Pauli早就指出的，为了保持规范不变性，规范玻色子必须是无质量的，而Yukawa更早前就指出强相互作用的短程性要求它由有质量的量子来传递。&lt;/p&gt;
+&lt;h1 class=&quot;title&quot;&gt;蒙特卡罗法计算Pi&lt;/h1&gt;
 
-&lt;p&gt;在量子场论遇到困难时，许多物理学家将目光投向了对称性原理，因为由对称性原理无须知道相互作用的动力学也可作出很多理论预言。当时已经知道很多种对称性，然而其中一大部分对称性是破缺的近似对称性。物理学家普遍相信对称性原理是大自然最深层简单性的体现，那么为何会有近似对称性呢？或者说近似对称性是怎样来的？当时有人认为近似对称性是严格对称性自发破缺的结果。 对称性自发破缺是指一个物理体系的拉氏量具有某种对称性，而其能量最低态—基态却不具有这种对称性。1961 年 Goldstone提出一条定理：每一个自发破缺的整体连续对称性都必然伴随一个无质量标量粒子 (称为Goldstone粒子)。这对近似对称性是严格对称性破缺结果的看法提出了重大挑战，因为如果那些近似对称性确实是严格对称性破缺的结果的话，那么应该存在相应的无质量粒子，然而实际上我们从没看到过这样的粒子。1964 年，Higgs证明如果对称性是定域对称性，则Goldstone粒子将会被一个有质量的粒子所取代。这一粒子现在被称为Higgs粒子。 此后不久，F. Englert与 R. Brout证明了，如果一个定域对称性自发破缺，那么不仅Goldstone粒子，连矢量规范粒子也将获得质量。这就是著名的Higgs机制。随后 A. Salam 用Yang-Mills 模型及Higgs 机制构筑了一个可以用于弱相互作用的模型，这为Yang-Mills 模型提供了一个很强的范例。与之独立地，S.Weinberg 于1967用被Higgs机制破缺的定域$SU(2)\times U(1)$对称性给出了第一个将电磁与弱相互作用合二为一的具体模型。长期以来可重整性都被看作是一个合理的量子场论必须满足的关键条件，(现在人们对可重整性有了新看法：不可重整的场论可看作是有效场论) 因而当七十年代初 &amp;#8216;tHooft 和Veltman最终证明了有质量的Yang-Mills模型是可重整化的，规范场的量子理论被广泛接受，从而为粒子物理标准模型的建立奠定了坚实的基础。1983年电弱理论预言的传递弱作用的$W^{\pm}$和中间玻色子$Z^0$均被实验发现，然而Higgs 粒子迄今依然没有发现，这使得寻找Higgs粒子成为一个重要的粒子物理实验目标。&lt;/p&gt;
 
-&lt;h1 id='higgs'&gt;Higgs机制&lt;/h1&gt;
-
-&lt;h2 id='yangmills'&gt;Yang-Mills规范理论&lt;/h2&gt;
-
-&lt;p&gt;早在Einstein 将引力几何化后，H.Weyl 从中受到启发，尝试将电磁相互作用和引力相互作用统一在几何中。他注意到Einstein 在广义相对论中假定长度 $l=ds^2=g_{\mu\nu}dx^\mu dx^\nu$ 是个不变量，Weyl 认为没有理由让长度一定是个不变量，更自然的假定是长度$l$是个时空函数：$dl=-la$，其中 $a=\Sigma A_\mu dx^\mu$是一次形式，$A_\mu$是可微函数。简而言之，Weyl的观点是长度的标度(或者标尺即gauge 的原意)应该局域地定义，而物理规律应与标尺规定无关，即就是物理规律在gauge变换下不变。作gauge(标尺)变换：$$g_{\mu\nu}\mapsto g&amp;#8217;_{\mu\nu}=\lambda(x)g_{\mu\nu}$$ 则 $$\begin{array}{c} l \rightarrow l&amp;#8217;=\lambda(x)l \hspace{5pt}dl&amp;#8217;=-a&amp;#8217;l&amp;#8217;=-a&amp;#8217;\lambda(x)l \ dl&amp;#8217;=d(\lambda l)=\lambda dl+ld\lambda =-\lambda la +ld\lambda =-(a-\frac{d\lambda}{\lambda})\lambda l \ \end{array}$$&lt;/p&gt;
-
-&lt;p&gt;$$\Rightarrow a&amp;#8217;=a-\frac{d\lambda}{\lambda}$$ 由于$a=\Sigma A_\mu dx^\mu$，故在此规范变换下 $$A_\mu\rightarrow A&amp;#8217;_\mu=A_\mu-\partial_\mu \lambda/\lambda$$ 而量$F_{\mu\nu}\equiv \partial_\mu A_\nu-\partial_\nu A_\mu$在此规范变化下不变，据此Weyl 认为$A_\mu$就是电磁势。然而由$$dl=-la\hspace{15pt}\Rightarrow\hspace{15pt}l_{x&amp;#8217;^\mu}=l_{x^\mu}e^{-\int a}$$ 这表明除非$a$是恰当形式，否则长度是不可积的，这导致了一系列无法克服的困难，因此遭到了Einstein等人的强烈批评，Weyl因此放弃了这个理论。然而当量子力学建立后，1926 年Fock等人发现若将Weyl的$A_{\mu}(x)$换作$(iq/\hbar c)A_{\mu}(x)$，同时用波函数的相位变换取代标度变换，即定域相位变换下：$$\psi\rightarrow \psi&amp;#8217;=\psi e^{i\chi(x)}$$ 若要求相应的动力学方程不变，则应有: $$\partial_\mu\rightarrow \mathcal{D}_\mu\equiv\partial_\mu+(iq/\hbar c)A_{\mu}$$这正是正则动量算符$\hat{P}_\mu\equiv -i\hbar\partial_\mu$在出现电磁场时的量子力学推广： $$\hat{P}_\mu\equiv -i\hbar\partial_\mu\rightarrow -i\hbar\mathcal{D}_\mu\equiv-i\hbar(\partial_\mu+(iq/\hbar c)A_{\mu})$$ 这表明为了保持定域$U(1)$相位变换下动力学方程不变，要求引入一个新的微商算子$\mathcal{D}_\mu$，称为协变微商，它要求场$A_\mu$与$\psi$协同地变换。在$\psi$作变换时要求$$\mathcal{D}_\mu\rightarrow \mathcal{D}&amp;#8217;_\mu=\partial_\mu+\frac{iq}{\hbar c}A&amp;#8217;_\mu \hspace{30pt}A_\mu\rightarrow A&amp;#8217;_\mu=A_\mu-\frac{\hbar c}{q}\partial_\mu\chi(x)$$ 那么就有$$\mathcal{D}_\mu\psi\rightarrow(\mathcal{D}_\mu \psi)&amp;#8217;=\mathcal{D}&amp;#8217;_\mu\psi&amp;#8217;=e^{i\chi(x)}\mathcal{D}_\mu\psi$$ 即表明在场$\psi$做定域规范变换时，场$A_\mu$作相应的变换则有使动力学方程保持不变。规范不变性要求的协变微商中场$A_\mu$以一个联络项出现，这一项表达了电磁相互作用，它的形式由$U(1)$规范不变性完全确定，称为最小电磁耦合。需要注意三点：&lt;/p&gt;
-
+&lt;div id=&quot;table-of-contents&quot;&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id=&quot;text-table-of-contents&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$U(1)$定域变换不变性的要求规定了电磁作用的形式，表明Maxwell场本质上是$U(1)$规范场；&lt;/p&gt;
-&lt;/li&gt;
-
-&lt;li&gt;
-&lt;p&gt;$U(1)$群是个阿贝尔群，因此$U(1)$规范场是阿贝尔规范场；&lt;/p&gt;
-&lt;/li&gt;
-
-&lt;li&gt;
-&lt;p&gt;电磁场即$U(1)$规范场是无质量的，质量项的出现会破坏规范对称性。&lt;/p&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-1&quot;&gt;1 缘起&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-2&quot;&gt;2 Lisp实现：&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-3&quot;&gt;3 Python实现：&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-4&quot;&gt;4 C 实现&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-5&quot;&gt;5 效率&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-6&quot;&gt;6 注记&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-6_1&quot;&gt;6.1 随机数生成&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-6_2&quot;&gt;6.2 计算的精度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-6_3&quot;&gt;6.3 蒙特卡罗法(Monte Carlo)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;p&gt;为了简化公式的书写，以下使用自然单位制：$\hbar =c=1$。杨振宁和Mills将$U(1)$规范推广到非阿贝尔的$SU(2)$规范变换。考虑如下的拉氏量密度： $$ \mathcal{L}=i\bar{\psi}\gamma^\mu\partial_\mu\psi-m\bar{\psi}\psi$$ 其中 $$\psi\equiv \left( \begin{array}{c} \psi_1 \ \psi_2 \ \end{array} \right)$$ ， 而$\psi_1$和$\psi_2$都是满足Dirac方程的四分量旋量。而$m$是质量。做规范变换： $$\psi\rightarrow U\psi \hspace{25pt}U\equiv e^{iH}$$ 其中$H$是Hermite矩阵：$H=\theta1+\vec{\tau}\cdot\vec{a}$，这里$\vec{\tau}$是Pauli矩阵，$\vec{a}=(a_1,a_2,a_3)$其中$a_1,a_2,a_3$均是实数。即 $$U=e^{i\theta}e^{i\tau\cdot\vec{a}}$$ 其中$\exp{(i\theta)}$项是前面的$U(1)$变换，因此我们仅考虑关于$\exp{(i\tau\cdot\vec{a})}$项的变换，这是一个$SU(2)$整体规范变换。因为拉氏量密度仅是场$\psi$和场的一阶导数$\partial_\mu\psi$的函数即$\mathcal{L}(\partial_\mu\psi,\psi)$，那么整体规范不变性即是说在变换： $$\psi\rightarrow S\psi \hspace{25pt}\partial_\mu\psi\rightarrow S\partial_\mu\psi \hspace{25pt}S\equiv e^{i\tau\cdot\vec{a}}$$下拉氏量密度保持不变。类比U(1)定域变换，杨振宁和Mills考虑了定域变换，令$\vec{\lambda}(x)\equiv -\vec{a}(x)/q$，其中q是耦合常数(类比于电荷)。则变换(\ref{7})变成$$\psi\rightarrow S\psi \hspace{25pt}S=e^{-iq\vec{\tau}\cdot\vec{\lambda}(x)}$$ 即将常数S推广为坐标的函数，这就是SU(2)定域规范变换。这时：$$ \partial_\mu\psi\rightarrow S\partial_\mu\psi+\left(\partial_\mu S\right)\psi $$ 多出来的项$(\partial_\mu S)\psi$使得拉氏量密度$\mathcal{L}(\partial_\mu\psi,\psi)$在此变换下不再是不变的。为了保持它在此定域变换下不变，必须引入矢量场$\vec{A}_\mu(x)$，它是 内部矢量空间中的$N\times N$矩阵。在作变换(\ref{9})的同时使$\vec{A}_\mu(x)$做协同变换。与前面一样引入协变微商：$$ \mathcal{D}_\mu\equiv\partial_\mu+iq\vec{\tau}\cdot\vec{A}_\mu $$ 如果要求此协变微商在变换(\ref{9})下有如下的变换性质： $$ \mathcal{D}_\mu\psi\rightarrow S(\mathcal{D}_\mu\psi) $$ 那么由拉氏量$\mathcal{L}(\partial_\mu\psi,\psi)$在变换下的不变性可知拉氏量$\mathcal{L}(\mathcal{D}_\mu\psi,\psi)$在定域规范变换下也不变。和前面的U(1)规范不变性一样，SU(2)规范不变性要求出现一个规范场$\vec{A}_\mu$，它在协变微商中以联络项出现。这导致拉氏量密度变为： $$ \mathcal{L}=i\bar{\psi}\gamma^\mu\mathcal{D}_\mu\psi-m\bar{\psi}\psi=\left(i\bar{\psi}\gamma^\mu\partial_\mu\psi-m\bar{\psi}\psi\right)-(q\bar{\psi}\gamma^\mu\vec{\tau}\psi)\cdot\vec{A}_\mu $$ 可见方括号内的原来的拉氏量密度，而最后一项称为耦合项。即与原来拉氏量密度(\ref{6})相比出现了耦合项。由变换(\ref{12})可得到$\vec{A}_\mu$相应的变换为： $$ \vec{A}&amp;#8217;_\mu=\vec{A}_\mu+\partial_\mu\vec{\lambda}+2q(\vec{\lambda}\times\vec{A}_\mu) $$ 这时场强的定义为： $$ F^{\mu\nu}\equiv \partial^\mu \vec{A}^\nu-\partial^\nu\vec{A}^\mu-2q(\vec{A}^\mu\times\vec{A}^\nu) $$ 在规范变换下$F^{\mu\nu}$相应的变换为： $$ F^{\mu\nu}\rightarrow F^{\mu\nu}+2q(\vec{\lambda}\times F^{\mu\nu}) $$ 场强$F^{\mu\nu}$的定义使得完整的拉氏量密度 $$ \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+i\bar{\psi}\gamma^\mu\partial_\mu\psi-m\bar{\psi}\psi-(q\bar{\psi}\gamma^\mu\vec{\tau}\psi)\cdot\vec{A}_\mu $$ 在定域规范变换不变。规范不变性原理的重要之处在于它给出一个决定相互作用形式的原理，而不是唯象地根据由实验现象猜测假设相互作用的形式。但是规范不变性要求相应的规范场是无质量的，质量项在拉氏量密度中的出现将破坏规范不变性。这使得Yang-Mills理论似乎不是一个关于现实世界的理论。&lt;/p&gt;
+&lt;div id=&quot;outline-container-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;1&lt;/span&gt; 缘起&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1&quot;&gt;
 
-&lt;h2 id='id114'&gt;对称性自发破缺&lt;/h2&gt;
+&lt;p&gt;记得高中时，听人说，在一个方形靶上画个圆，然后随机向靶上投飞针，最后数数多少针落在圆内，就能估算出圆周率。当时感觉这算法真的非常巧妙。最近我偶然回想起这事，想试试蒙特卡罗在计算\(\pi\)上效率如何。
+&lt;/p&gt;
+&lt;p&gt;
+很简单，考虑一个边长为1正方形，其内有个圆内切。要是我们随机向这个正方形中投针，那么在圆内的针的数目和正方形里针的总数的比为\(\pi/4\)。
+&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;对称性自发破缺是指系统的哈密顿量具有某个对称性，而系统的某个基态却不具有此对称性。在量子力学中，基态被定义为能量最低的状态，而量子场论中的微扰计算就是从场的基态(真空态)开始做微扰进行计算相互作用。考虑拉氏量密度$\mathcal{L}=T-V(\phi)$，其中$\phi(t,\vec{x})$是标量场。 将标量场写成：$\phi(t,\vec{x})=\phi_{min}+\delta\phi(t,\vec{x})$，将势$V(\phi)$关于场的最小值$\phi_{min}$(基态)展开到$\delta\phi$的二阶项，由于标量场的量纲是质量的量纲，而拉氏量密度$\mathcal{L}$的量纲是质量的四次方，因此展开式中二阶项的系数是质量平方的量纲，这项称为质量项，更高阶项是自相互作用项。 如设势为$V(\phi)=e^{-(\alpha\phi)^2}$，($\alpha$是一个实常数) 则将势$V(\phi)$展开到$\phi$的四阶项得：$V(\phi)=1-(\alpha\phi)^2+\frac{1}{2}(\alpha\phi)^4$，因此场的质量为：$m=\sqrt{2}\alpha$。设对某个势$V(\phi)$展开后，拉氏量密度如下： $$ \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi+\frac{1}{2}\mu^2\phi^2-\frac{1}{4}\lambda^2\phi^4 $$ 其中$\mu$和$\lambda$是实常数，因为在拉氏量中常数项对动力学无影响，已经丢掉了无关的常数项$V(0)$。这个拉氏量密度关于变换$\phi\rightarrow -\phi$是对称的。 注意到拉氏量密度中质量项的符号是正的，因此对应的场质量是虚的。这是因为选择的展开点并不是场的能量最小值，即不是真正的基态。由于势$V(\phi)$为： $$ V(\phi)=-\frac{1}{2}\mu^2\phi^2+\frac{1}{4}\lambda^2\phi^4 \hspace{25pt}\frac{\partial V}{\partial \phi}=0\Rightarrow \phi=0,\pm\frac{\mu}{\lambda} $$ 这个势的形状见Figrue1左，可看出$\phi=0$不是能量最低点，而是局域能量最高点。重新定义一个新的场变量：$\eta\equiv\phi\pm\mu/\lambda$，拉氏量可写为： $$ \mathcal{L}=\frac{1}{2}\partial_\mu\eta\partial^\mu\eta-\mu^2\eta^2\pm\mu\lambda\eta^3-\frac{1}{4}\lambda^2\eta^4+\frac{1}{4}\frac{\mu^2}{\lambda} $$ 现在质量项是正的，场质量为：$m=\sqrt{2}\mu$。然而新的以$\eta$表示的拉氏量密度却并没有$\eta\rightarrow -\eta$的对称性。也就是说在系统的基态这个对称性已经破缺了。而这个破缺是一个自发的过程，并没有外在的影响，所以称为对称性自发破缺。这个破缺的对称性是分立对称性，我们更感兴趣的是连续对称性破缺。为此考虑如下的拉氏量密度： $$ \mathcal{L}=\frac{1}{2}\partial_\mu\phi_1\partial^\mu\phi_1+\frac{1}{2}\partial_\mu\phi_2\partial^\mu\phi_2+\frac{1}{2}\mu^2(\phi_1^2+\phi_2^2)-\frac{1}{4}\lambda^2(\phi_1^2+\phi_2^2)^2 $$ 这个拉氏量密度和前面的拉氏量密度完全类似，不过场变量有两个，由于拉氏量密度仅含有场$\phi_1$，$\phi_2$的平方和，所以拉氏量在$\phi_1,\phi_2$的空间中具有转动不变性，即对变换 $$\left( \begin{array}{c} \phi_1&amp;#8217; \ \phi_2&amp;#8217; \ \end{array}\right)=\left( \begin{array}{cc} \cos\theta &amp;amp; \sin\theta\ -\sin\theta &amp;amp; \cos\theta \ \end{array} \right)\left( \begin{array}{c} \phi_1 \ \phi_2 \ \end{array} \right)$$ 具有不变性，这是SO(2)对称性。其中势$V(\phi_1,\phi_2)$为： $$ V(\phi_1,\phi_2)=-\frac{1}{2}\mu^2(\phi_1^2+\phi_2^2)+\frac{1}{4}\lambda^2(\phi_1^2+\phi_2^2)^2 $$ $$ \frac{\partial V}{\partial(\phi_1^2+\phi_2^2)}=0 \Rightarrow \phi_{1_{min}}^2+\phi_{2_{min}}^2=\frac{\mu^2}{\lambda^2} $$ 这个势的形状见Figrue1右。为了进行微扰计算，必须选定一个具体的基态，如： $\phi_{1_{min}}=\mu/\lambda,\phi_{2_{min}}=0$。注意到场$\phi_{1_{min}},\phi_{2_{min}}$ 的质量都是虚的，为此引入新的场变量： $$ \eta\equiv\phi_1-\frac{\mu}{\lambda} \hspace{30pt} \xi\equiv\phi_2 $$ 这时拉氏量密度可写为： $$ \mathcal{L}=\left(\frac{1}{2}\partial_\mu\eta\partial^\mu\eta-\mu^2\eta^2\right)+\left(\frac{1}{2}\partial_\mu\xi\partial^\mu\xi\right)+ \left(\mu\lambda(\eta^3+\eta\xi^2)-\frac{\lambda^2}{4}(\eta^4+\xi^4+2\eta^2\xi^2)\right)+\frac{\mu^4}{4\lambda^2} $$ 其中第一项自由标量场的拉氏量密度，场质量为$m_\eta=\sqrt{2}\mu$；第二项仅有动能项，对应的质量项为零，即$m_\xi=0$；第三项是场的自相互作用项和场之间的相互作用项。 注意到基态的全体是在$\phi_1,\phi_2$空间旋转不变的，而对一个具体的基态，这个连续的整体对称性并不存在，也就是说对称性自发破缺了。 这正是Goldstone定理的一个特例，即任何一个整体连续对称性的破缺必然伴随着出现一个无质量的标量(因而零自旋)粒子，即Goldstone玻色子。正是这条定理使我们将近似对称性看作严格对称性破缺而来造成了困难。因为如果近似对称性真是严格对称性破缺的结果的话，我们应该观测到相应的Goldstone玻色子，但实际上却并没有这些玻色子。然而当考虑定域连续对称性时，问题得到了解决，这就是Higgs机制的结果。&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;h2 id='higgs'&gt;Higgs机制&lt;/h2&gt;
+&lt;div id=&quot;outline-container-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;2&lt;/span&gt; Lisp实现：&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2&quot;&gt;
 
-&lt;p&gt;规范对称性和自发性对称破缺都遇到了无质量粒子的困难，规范不变性要求相应的规范场是无质量的，而核力却是短程力；对称性自发破缺要求产生无质量的Goldstone玻色子，而实际上并没看到这些粒子。然而当将规范场的概念和对称性自发破缺的概念结合在一个理论中时，这两个问题竟然同时解决了。&lt;/p&gt;
 
-&lt;p&gt;考虑的拉氏量密度，但是用两个实场$\phi_1,\phi_2$定义一个复场$\phi$： $$ \phi\equiv\phi_1+i\phi_2 \hspace{25pt}\Rightarrow \phi^\ast\phi=\phi_1^2+\phi_2^2 $$ 以$\phi$的形式重写拉氏量密度： $$ \mathcal{L}=\frac{1}{2}\partial_\mu\phi^\ast\partial^\mu\phi+\frac{1}{2}\mu^2(\phi^\ast\phi)-\frac{1}{4}\lambda^2(\phi^\ast\phi)^2 $$ 这时$\phi_1,\phi_2$空间的SO(2)旋转不变性变为U(1)相位变换： $$ \phi\rightarrow e^{i\theta}\phi $$ 这和我们前面考虑过的U(1)变换非常类似，仅仅是以复标量场$\phi$代替了旋量场$\psi$。同样要求拉氏量密度具有定域规范不变性： $$ \phi \rightarrow e^{i\theta(x)}\phi $$ 则需要引入无质量的规范场$A_\mu$和协变微商：$D_\mu=\partial_\mu+iqA_\mu$，而拉氏量密度成为： $$ \mathcal{L}=\frac{1}{2}D_\mu\phi^\ast D^\mu\phi+\frac{1}{2}\mu^2(\phi^\ast\phi)-\frac{1}{4}\lambda^2(\phi^\ast\phi)^2-\frac{1}{4}F^2 $$ 同样注意到复标量场的质量是虚的，跟前面完全一样，引入新场变量： $$\eta\equiv\phi_1-\mu/\lambda \hspace{20pt} \xi\equiv\phi_2$$后， 拉氏量密度成为： \begin{eqnarray} \mathcal{L}&amp;amp;=&amp;amp;\left(\frac{1}{2}\partial_\mu\eta\partial^\mu\eta-\mu^2\eta^2\right)+\left(\frac{1}{2}\partial_\mu\xi\partial^\mu\xi\right) +\left(-\frac{1}{4}F^2+\frac{1}{2}(\frac{q\mu}{\lambda})^2A_\mu A^\mu\right) \ -2i(\frac{q\mu}{\lambda})(\partial_\mu\xi)A^\mu+ \left(q(\eta\partial_\mu\xi-\xi\partial_\mu\eta)A^\mu+\frac{\mu}{\lambda}q^2\eta(A_\mu A^\mu)\right. \ &amp;amp;+&amp;amp; \left.\frac{1}{2}q^2(\xi^2+\eta^2)A_\mu A^\mu-\lambda\mu(\eta^3+\eta\xi^2)-\frac{1}{4}\lambda^2(\eta^4+2\eta^2\xi^2+\xi^4)\right) +(\frac{\mu^2}{2\lambda^2})^2 \end{eqnarray}&lt;/p&gt;
 
-&lt;p&gt;其中第一项是自由标量场的拉氏量密度，场质量为$m_\eta=\sqrt{2}\mu$; 而第二项是无质量的Goldstone玻色子的拉氏量密度；第三项描述自由规范场$A_\mu$，但是它得到了一个质量$m_A=\frac{q\mu}{\lambda}$。倒数第二项是场$\eta,\xi,A_\mu$之间的耦合项，它们的耦合方式也被确定了。尽管规范场的质量问题解决了，然而无质量的Goldstone玻色子依然存在，但这可以通过选取一个特殊的规范变换消除掉，因为拉氏量密度是定域规范不变的。定域规范变换为： \begin{eqnarray} \phi\rightarrow \phi&amp;#8217;&amp;amp;=&amp;amp;(\cos\theta+i\sin\theta)(\phi_1+i\phi_2) \ &amp;amp;=&amp;amp;(\phi_1\cos\theta-\phi_2\sin\theta)+i(\phi_1\sin\theta+\phi_2\cos\theta) \end{eqnarray}&lt;/p&gt;
 
-&lt;p&gt;当选取$\theta=-\tan^{-1}(\phi_2/\phi_1)$时，变换后的场$\phi&amp;#8217;$的虚部为零，即$\xi=0$。这时拉氏量密度为： \begin{eqnarray} \mathcal{L}&amp;amp;=&amp;amp;\left(\frac{1}{2}\partial_\mu\eta\partial^\mu\eta-\mu^2\eta^2\right)+\left(-\frac{1}{4}F^2+\frac{1}{2}(\frac{q\mu}{\lambda})^2A_\mu A^\mu\right) \ &amp;amp;+&amp;amp;\left(\frac{\mu}{\lambda}q^2\eta(A_\mu A^\mu)+ \frac{1}{2}q^2\eta^2A_\mu A^\mu-\lambda\mu\eta^3-\frac{1}{4}\lambda^2\eta^4\right) +(\frac{\mu^2}{2\lambda^2})^2 \end{eqnarray} 这时拉氏量密度中仅含有质量标量场$\eta$，和有质量的规范场$A_\mu$。其中$\eta$场的量子称为Higgs粒子，这个机制成为Higgs机制。在这个过程中无质量的规范场只有两个自由度(对应两个横向极化方向)，而当它得到质量时也增加一个自由度(纵向自由度)，而这个增加的自由度来自于消失的Goldstone玻色子。有时人们形象的说规范场吃掉了Goldstone玻色子得到了质量。这个机制是规范不变性和对称性自发破缺联合作用的结果。通过要求拉氏量密度的定域规范不变性引入规范场$A_\mu$，而后采取特殊的规范变换(这相当于选取一个特定的基态，对于量子场论的微扰展开计算这也是必须的)，产生对称性自发破缺，从而使无质量的规范场得到质量。&lt;/p&gt;
 
-&lt;h1 id='higgs'&gt;寻找Higgs粒子&lt;/h1&gt;
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(&lt;span style=&quot;color: #ff0000;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #a020f0;&quot;&gt;pira&lt;/span&gt; ()
+      (&lt;span style=&quot;color: #ff0000;&quot;&gt;let*&lt;/span&gt; ((x (random 1.0))
+             (y (random 1.0))
+             (z (+ (expt (- x 0.5) 2) (expt (- y 0.5) 2))))
+        (&amp;lt;= z 0.25)))
+(&lt;span style=&quot;color: #ff0000;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #a020f0;&quot;&gt;js&lt;/span&gt; (num)
+  (&lt;span style=&quot;color: #ff0000;&quot;&gt;let&lt;/span&gt; ((x 0))
+    (&lt;span style=&quot;color: #ff0000;&quot;&gt;dotimes&lt;/span&gt; (i num)
+      (&lt;span style=&quot;color: #ff0000;&quot;&gt;if&lt;/span&gt; (pira)
+          (incf x)))
+     x))
+(time (/ (&lt;span style=&quot;color: #ff0000;&quot;&gt;loop&lt;/span&gt; for i from 1 to 10 summing (* (/ (js 1000000) 1000000.0) 4)) 10.0))
+&lt;/pre&gt;
 
-&lt;p&gt;由于粒子物理标准模型中，所有粒子都与Higgs场耦合从而得到质量，因此实验上直接观测到Higgs粒子存在的证据才能使标准模型得到最终确立。另外现在很多的关键物理问题都依赖于标量场的概念(如暗能量的一些模型和Boson星)，但是标量场却从没在实验上直接观测到。Higgs粒子的发现将表明标量场真的存在，而非仅仅是理论的想象。鉴于Higgs粒子的这些重要影响，寻找Higgs粒子一直以来都是实验粒子物理的最主要目标。&lt;/p&gt;
 
-&lt;h2 id='higgs'&gt;Higgs粒子质量的理论限制&lt;/h2&gt;
+&lt;p&gt;
+&lt;i&gt;结果：&lt;/i&gt;
+&lt;/p&gt;
+&lt;p class=&quot;verse&quot;&gt;
+Evaluation took:&lt;br/&gt;
+0.444 seconds of real time&lt;br/&gt;
+0.440000 seconds of total run time (0.440000 user, 0.000000 system)&lt;br/&gt;
+99.10% CPU&lt;br/&gt;
+1,328,853,888 processor cycles&lt;br/&gt;
+5,984 bytes consed&lt;br/&gt;
+&lt;br/&gt;
+3.1417744&lt;br/&gt;
+&lt;/p&gt;
 
-&lt;p&gt;假定在微扰理论失效和新物理出现之前的能标中，标准模型是适用的。那么，如果Higgs粒子的质量$M_H&amp;lt; 1 Tev$则纵W和Z玻色子将会有很强的相互作用，为了保证它们在高能散射中的幺正性，进一步要求$M_H\sim 710 Gev$。另外Higgs场的四阶自耦合作用随能量的增长而呈对数发散，这要求给出一个截断，由于四阶自耦合被$M_H$决定，因此条件$M_H\sim \Lambda$给Higgs粒子的质量设置了一个上限$M_H\sim 630 Gev$。如果要求标准模型在大统一能标以下适用，则$\Lambda\sim 10^{16}Gev$，Higgs粒子的质量应在$130 Gev\sim M_H \sim 180 Gev$。&lt;/p&gt;
 
-&lt;h2 id='higgs'&gt;寻找Higgs粒子的实验&lt;/h2&gt;
+&lt;/div&gt;
 
-&lt;p&gt;在欧洲核子中心(CERN)的大型强子对撞机(Large Hadron Collider LHC)建成之前，寻找Higgs粒子的实验在CERN的大型正负电子对撞机(Large Electron–Positron Collider LEP)和美国费米实验室的Tevatron上进行。LEP从1989年开始运行到2000年终止运行，在它所能达到的能量范围内并没发现Higgs粒子。&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;LEP通过Higgs–strahlung过程： $e^+e^-\rightarrow H+ Z$来寻找Higgs粒子，其中Z粒子是已知的基本粒子，质量约为$91 Gev$，而LEP的质心能量在后期改进后最高可达$\sqrt{s}=209 Gev$，因此它只能寻找质量小于$118 Gev$的Higgs粒子，如果Higgs粒子的质量比这个质量大，那么在LEP上是无法看到它的。LEP是环形加速器，在其环上有四个大型探测器Aleph、Delphi、Opal和L3。每个探测器都有一个联合实验小组分析数据。类似标准模型Higgs粒子在LEP上产生机制主要为：&lt;/p&gt;
+&lt;div id=&quot;outline-container-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3&lt;/span&gt; Python实现：&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3&quot;&gt;
 
-&lt;p&gt;(a)轫致辐射过程：$e^+e^-\rightarrow (Z)\rightarrow Z+H$，即正负电子对撞产生Z，Z再释放出H；&lt;/p&gt;
 
-&lt;p&gt;(b)WW聚变过程：$e^+e^-\rightarrow \nu\overline{\nu}(WW)\rightarrow \nu\overline{\nu}+H$ ；&lt;/p&gt;
 
-&lt;p&gt;(c)ZZ聚变过程：$e^+e^-\rightarrow e^+e^-(ZZ)\rightarrow e^+e^-+H$；&lt;/p&gt;
 
-&lt;p&gt;(d)顶夸克辐射过程：$e^+e^-\rightarrow (\gamma,Z)\rightarrow t\overline{t}+H$。&lt;/p&gt;
 
-&lt;p&gt;2002年夏，LEP的四个实验小组公布的最终结果为：在95\%的置信度上$M_H\geq 114.4 Gev$。&lt;/p&gt;
+&lt;pre class=&quot;src src-Python&quot;&gt;# coding: utf-8
+import random
+import time
+def pir(a):
+    s = 0
+    for i in range(1,int(a)):
+        x = random.random()
+        y = random.random()
+        z = (x-0.5)**2 + (y-0.5)**2
+        if z &amp;lt;= 0.25:
+            s += 1
 
-&lt;p&gt;标准模型Higgs粒子在强子对撞机上的产生机制主要为：&lt;/p&gt;
+    return s/a
 
-&lt;p&gt;(a)胶子聚变：$gg\rightarrow H$，两个高能胶子分别称为正反顶夸克对，其中一个胶子产生的顶夸克和另一个胶子产生的反顶夸克聚变形成中性Higgs粒子然后衰变为正反底夸克对： $H\rightarrow b\overline{b}$；&lt;/p&gt;
+begin = time.time()
+b = sum([pir(1000000.0)*4 for j in range(10)])
+print b/10.0
+print &lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;&amp;#29992;&amp;#26102;:%s&amp;#31186;&quot;&lt;/span&gt;%(time.time()-begin)
+&lt;/pre&gt;
 
-&lt;p&gt;(b)与W/Z协同产生：$q\overline{q}\rightarrow V+H$，V为W/Z；&lt;/p&gt;
 
-&lt;p&gt;(c)矢量Bosons聚变(Vector Boson Fusion VBF)：$VV\rightarrow H$；&lt;/p&gt;
+&lt;p&gt;
+&lt;i&gt;结果：&lt;/i&gt;
+&lt;/p&gt;
+&lt;p class=&quot;verse&quot;&gt;
+3.1413604&lt;br/&gt;
+用时:5.98418188095秒&lt;br/&gt;
+&lt;/p&gt;
 
-&lt;p&gt;(d)与顶夸克－反顶夸克对协同产生：$gg,q\overline{q}\rightarrow Q\overline{Q}+H$。&lt;/p&gt;
 
-&lt;h1 id='reference'&gt;Reference&lt;/h1&gt;
+&lt;/div&gt;
 
-&lt;p&gt;1 Steven Weinberg Eur.Phys.J.C34:5-13,2004&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;2 Gerard &amp;#8216;t Hooft arXiv: hep-th/9812203v2 (lecture notes Erice)&lt;/p&gt;
+&lt;div id=&quot;outline-container-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-4&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4&lt;/span&gt; C 实现&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-4&quot;&gt;
 
-&lt;p&gt;3 Tian Yu Cao Conceptual Developments of 20th Century Field Theories Cambridge University Press 1997&lt;/p&gt;
 
-&lt;p&gt;4 David Griffiths Introduction To Elementary Particles Harper \&amp;amp; Row Publishers 1987&lt;/p&gt;
 
-&lt;p&gt;5 戴元本 《相互作用的规范理论》 科学出版社 2005 第二版&lt;/p&gt;
 
-&lt;p&gt;6 Abdelhak Djouadi Pramana62:191-206,2004&lt;/p&gt;
+&lt;pre class=&quot;src src-C&quot;&gt;#include &lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;stdio.h&quot;&lt;/span&gt;
+#include &lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;math.h&quot;&lt;/span&gt;
+#include &lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;time.h&quot;&lt;/span&gt;
+#define RAND_MAX 0x7fffffff
+#define NUM 1000000.0
+float randpi(float number)
+{
+  int i,s=0;
+  float x,y,z;
+  for(i = 1;i &amp;lt;= number;i++)
+  {
+    x = (double)(1.0*rand()/(RAND_MAX+1.0));
+    y = (double)(1.0*rand()/(RAND_MAX+1.0));
+    z = pow(x-0.5,2.0)+pow(y-0.5,2.0);
+    if(z &amp;lt;= 0.25)s++;
+  }
+  return ((s/number)*4.0);
+}
+main ()
+{
+  float c_start,c_end,sn;
+  int j;
+  c_start = clock();
+  for(j = 1;j &amp;lt;= 10;j++)
+  {
+    sn += randpi(NUM);
+  }
+  printf(&lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;Pi is %f\n&quot;&lt;/span&gt;,(sn/10.0));
+  c_end = clock();
+  printf(&lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;Usage time = %fs.&quot;&lt;/span&gt;,difftime(c_end,c_start)/CLOCKS_PER_SEC);
+  return 0;
+}
+&lt;/pre&gt;
 
-&lt;p&gt;7 The LEP Higgs Working Group, Note/2002-01 for the SM and Note/2002-04 for the MSSM&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>多重世界</title>
-   <link href="http://yangbin.tk/2012/10/05/warp.html"/>
-   <updated>2012-10-05T00:00:00+08:00</updated>
-   <id>http://yangbin.tk/2012/10/05/warp</id>
-   <content type="html">&lt;h1 id='id113'&gt;多重世界&lt;/h1&gt;
-&lt;p class='meta'&gt;Oct 05 2012 - Shanghai&lt;/p&gt;
-&lt;p&gt;量子力学的多世界解释一直是个充满兴趣的问题。为数不少的物理学家相信多世界解释。今天高人 Bousso和 Susskind在arXiv上贴了一篇文章&lt;a href='http://arxiv.org/abs/1105.3796'&gt;The Multiverse Interpretation of Quantum Mechanics&lt;/a&gt;：&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;We argue that the many-worlds of quantum mechanics and the many worlds of the multiverse are the same thing, and that the multiverse is necessary to give exact operational meaning to probabilistic predictions from quantum mechanics. Decoherence - the modern version of wave-function collapse - is subjective in that it depends on the choice of a set of unmonitored degrees of freedom, the &amp;#8220;environment&amp;#8221;. In fact decoherence is absent in the complete description of any region larger than the future light-cone of a measurement event. However, if one restricts to the causal diamond - the largest region that can be causally probed - then the boundary of the diamond acts as a one-way membrane and thus provides a preferred choice of environment. We argue that the global multiverse is a representation of the many-worlds (all possible decoherent causal diamond histories) in a single geometry.&lt;/p&gt;
+&lt;p&gt;
+&lt;i&gt;结果&lt;/i&gt;
+&lt;/p&gt;
+&lt;p class=&quot;verse&quot;&gt;
+Pi is 3.142256&lt;br/&gt;
+Usage time = 0.250000s.&lt;br/&gt;
+&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-5&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-5&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;5&lt;/span&gt; 效率&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-5&quot;&gt;
+
+&lt;p&gt;取1,000,000个随机数进行计算，相当于进行一百万次投标。得到\(\pi\)的值，共做十次这样的计算，取平均值。
+&lt;/p&gt;
+&lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
+&lt;caption&gt;&lt;/caption&gt;
+&lt;colgroup&gt;&lt;col class=&quot;left&quot; /&gt;&lt;col class=&quot;right&quot; /&gt;&lt;col class=&quot;right&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th scope=&quot;col&quot; class=&quot;left&quot;&gt;Language&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;right&quot;&gt;Results&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;right&quot;&gt;Usage time/s&lt;/th&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td class=&quot;left&quot;&gt;c&lt;/td&gt;&lt;td class=&quot;right&quot;&gt;3.142256&lt;/td&gt;&lt;td class=&quot;right&quot;&gt;0.250000&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td class=&quot;left&quot;&gt;Lisp&lt;/td&gt;&lt;td class=&quot;right&quot;&gt;3.1417744&lt;/td&gt;&lt;td class=&quot;right&quot;&gt;0.444000&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td class=&quot;left&quot;&gt;Python&lt;/td&gt;&lt;td class=&quot;right&quot;&gt;3.1413604&lt;/td&gt;&lt;td class=&quot;right&quot;&gt;5.984182&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+&lt;p&gt;
+这次 &lt;i&gt;Lisp&lt;/i&gt; 的速度非常快，比python快了十几倍！以快著称的 &lt;b&gt;c&lt;/b&gt; 语言，比它也快不了一倍。看来Lisp做计算效率的确非常之快，名不虚传！要注意，这也许可能和这几种语言生成随机数的算法相关。
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-6&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;6&lt;/span&gt; 注记&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-6&quot;&gt;
+
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-6_1&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-6_1&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.1&lt;/span&gt; 随机数生成&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6_1&quot;&gt;
+
+&lt;p&gt;注意 c 的随机数生成函数 &lt;code&gt;rand()&lt;/code&gt; 的用法。这个函数生成 &lt;code&gt;0~RAND_MAX&lt;/code&gt; 之间的 &lt;b&gt;伪&lt;/b&gt; 随机数。这就是说，这个函数并不返回一个真正的随机数，而是使用一个确定的算法计算出一个“随机数”，这个过程完全可以预测，并非随机。其中 &lt;code&gt;RAND_MAX&lt;/code&gt; 是函数 &lt;code&gt;rand()&lt;/code&gt; 生成随机数的最大值。这个数根据不同的系统而不同，就我的Linux系统，它是 \(2^{31}-1\)也就是 &lt;code&gt;0x7fffffff&lt;/code&gt; ，对windows系统，据说是 &lt;code&gt;0xfff&lt;/code&gt; 。当我运行程序时，编译器提醒我， &lt;code&gt;RAND_MAX&lt;/code&gt; 没定义，于是我用 &lt;code&gt;0xfff&lt;/code&gt; 测试了下，发现结果不对，然后我猜应该是  &lt;code&gt;0xfffffff&lt;/code&gt; ，结果OK。
+&lt;/p&gt;
+&lt;p&gt;
+实际上在源码编译时，编译器抽取函数 &lt;code&gt;srand()&lt;/code&gt;  给函数 &lt;code&gt;rand()&lt;/code&gt; 一个种子，然后编译生成一个固定算式产生“随机数”，这样在得到目标代码后，你每次运行得到的“随机数”是固定的，一点都不随机。
+&lt;/p&gt;
+&lt;p&gt;
+让计算机生成随机数是个非常重要和很有技巧的事情。下面摘抄一段 &lt;i&gt;Harley Hahn&lt;/i&gt; 在其 &lt;i&gt;Harley Hahn's Guide to Unix and Linux&lt;/i&gt; 书中 \(Page_{576}\) 的技术提示：
+&lt;/p&gt;&lt;blockquote&gt;
+
+&lt;p&gt;Unix和Linux提供两种不同的特殊文件生成随机数：/dev/random 和 /dev/urandom 。它们之间的区别很微妙。
+&lt;/p&gt;
+&lt;p&gt;
+系统中的随机数生成器收集“environmental noise” ，并将其存储在一个“熵池”(entropy pool)中。然后，使用熵池中的数据位生成随机数。如果熵池中的数据被耗尽，那么 /dev/random 文件将停止，等待收集更多的noise。这样就可以保证关键操作(如创建加密文件)的完全随机性。但是，有时候，为了等待熵池被填充，可能会出现延迟的情况。
+&lt;/p&gt;
+&lt;p&gt;
+另一方面，/dev/urandom 则永远不会停止生成随机数，即使熵池短缺(&lt;b&gt;u&lt;/b&gt; means unlimited)。为此该文件会重用一些旧的数据位。理论上，使用短缺熵池随机数加密的数据更易受到攻击。在实际中，区别不是太大，因为没人真的知道如何利用这样的一个微小理论缺陷。
+&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;We propose that it must be possible in principle to verify quantum-mechanical predictions exactly. This requires not only the existence of exact observables but two additional postulates: a single observer within the universe can access infinitely many identical experiments; and the outcome of each experiment must be completely definite. In causal diamonds with finite surface area, holographic entropy bounds imply that no exact observables exist, and both postulates fail: experiments cannot be repeated infinitely many times; and decoherence is not completely irreversible, so outcomes are not definite. We argue that our postulates can be satisfied in &amp;#8220;hats&amp;#8221; (supersymmetric multiverse regions with vanishing cosmological constant). We propose a complementarity principle that relates the approximate observables associated with finite causal diamonds to exact observables in the hat.&lt;/p&gt;
-&lt;/blockquote&gt;</content>
+
+&lt;p&gt;
+我猜Sheldon会喜欢 /dev/random 的。事实上 Harley 过于乐观了，2006年有人提供了对&lt;a href=&quot;http://zh.wikipedia.org/wiki//dev/random&quot;&gt;Linux随机数发生器的详尽密码学分析&lt;/a&gt; ，提出了几个弱点。值得一提的是，最先在Linux内核中引入随机数发生器的是&lt;a href=&quot;http://www.techcn.com.cn/index.php?edition-view-132887-1&quot;&gt;曹予德&lt;/a&gt;。
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-6_2&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-6_2&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.2&lt;/span&gt; 计算的精度&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6_2&quot;&gt;
+
+&lt;p&gt;我们看到尽管 c 语言的计算速度最快，然而它的精度却是最差的，其它的都计算到了小数点后第三位，而 c 却只计算到第二位。事实上用 c 计算\(10^{9}\)次能得到 \(\pi=3.141576\)，耗时26.17秒。值得注意的是，当我使用python进行更高次(如一亿次)计算时，CPU并不运作，但我的计算机的内存和交换虚拟内存被迅速吃掉。这些闲置的内存加起来足足3G。上次我计算自幂数时也遇到这个问题。而用 c 进行计算完全不会发现内存被明显消耗。这是个值得深究的问题，我想在python中应该存在内存保护机制，而在默认情况下这个机制并未打开。
+总之，使用蒙特卡罗法估算的圆周率在精度上还远不能和祖冲之(429-500)得到结果相比。但是这个方法本来就不是干这种工作的，下面再述。
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-6_3&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-6_3&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.3&lt;/span&gt; 蒙特卡罗法(Monte Carlo)&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6_3&quot;&gt;
+
+&lt;p&gt;Monte Carlo是摩纳哥的著名赌城。这个方法来自&lt;a href=&quot;http://en.wikipedia.org/wiki/Stanislaw_Ulam&quot;&gt;S.Ulam&lt;/a&gt; 的一次灵感。在一次生病时，Ulam自己一个人玩扑克。从概率上分析，各种牌形的所有可能组合数目非常大，每一种特定牌形出现的几率很小。然而在实际发了十几圈牌时候，Ulam发现实际上与一种特定牌形相差不大的组合出现的几率还是非常大的。这使他意识到，通过实际做几次试验发牌，就能得到经典牌形出现的几率。这是个天才的想法。下面摘自 &lt;i&gt;S.Koonin&lt;/i&gt; 的 &lt;i&gt;Computational Physics&lt;/i&gt; Chapter 8:
+&lt;/p&gt;
+&lt;p&gt;
+考虑一个高维积分。如：由N个原子组成的气体，这些原子在温度\(1/\beta\)下通过对偶位势V相互作用，其经典配分函数正比于3N维积分：
+\[Z=\int d^{3}r_{1}\dots d^{3}r_{N}e^{-\beta\sum_{i&amp;lt;j}V(r_{ij})}\]
+为了数值求这个高维积分，我们需要将被积的高维空间离散成一个个小块，假设每一维坐标离散为10份，(这是个非常粗糙的离散化。)那么被积函数必须在\(10^{3N}\)个点上求值。假定考虑20个分子的相互作用，(这同样是个粗糙的近似)，那么要做\(10^{60}\)次计算。假定计算机每秒做\(10^{10}\)次计算，那么将需要\(10^{50}\)秒。而宇宙年龄仅为137亿年\(4.32\times 10^{17}\)秒。
+&lt;/p&gt;
+&lt;p&gt;
+这样一个常见的高维积分就使计算机毫无办法。这时Monte Carlo法就有用武之地了。它的处理方法很简单，以偏盖全，我们用随机抽样的方式在上述\(10^{3N}\)个点的一小部分上积分，用这些点上的积分值估计整个积分。这就是Monte Carlo法的中心思想。实际表明，这非常有效。实际上这个方法提出时，Ulam正在为曼哈顿计划服务。当时的计算机是最初级的计算机。Monte Carlo法的提出解决了大问题。
+&lt;/p&gt;
+&lt;p&gt;
+Ulam是个传奇人物。他是波兰天才数学家，少年时研究集合拓扑。后期研究包罗万象，在每个领域均能独树一帜，提出新的观点。他认为这和他在早年经过的集合论有关。他有本非常精彩的自传《一个数学家的经历》。其中有极多的个人研究体会，同时他精炼的评价了他对一些名家的看法，读来令人深受启发。
+&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;postamble&quot;&gt;
+&lt;p class=&quot;author&quot;&gt; Author: 杨彬
+&lt;/p&gt;
+&lt;p class=&quot;date&quot;&gt; Date: 2012-10-07 17:31:12 CST&lt;/p&gt;
+&lt;p class=&quot;creator&quot;&gt;HTML generated by org-mode 7.4 in emacs 23&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
  </entry>
  
  <entry>
-   <title>计算广义相对论的Mathmatica包</title>
-   <link href="http://yangbin.tk/2012/10/05/test.html"/>
-   <updated>2012-10-05T00:00:00+08:00</updated>
-   <id>http://yangbin.tk/2012/10/05/test</id>
-   <content type="html">&lt;ul&gt;
-&lt;li&gt;GR 使用符号计算软件Mathmatica计算广义相对论的包有很多中, 最知名的如&lt;a href='http://grtensor.phy.queensu.ca/'&gt;GRTensor&lt;/a&gt;. 但是我觉得这些包都不是很趁手, 因为就我个人而言, 这些包中很多功能我实际上用不到.&lt;/li&gt;
+   <title>Search Higgs Boson</title>
+   <link href="http://yangbin.tk/2011/06/23/Search-Higgs-Boson.html"/>
+   <updated>2011-06-23T00:00:00+08:00</updated>
+   <id>http://yangbin.tk/2011/06/23/Search-Higgs-Boson</id>
+   <content type="html">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+               &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+lang=&quot;en&quot; xml:lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;title&gt;追寻Higgs粒子&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;Org-mode&quot;/&gt;
+&lt;meta name=&quot;generated&quot; content=&quot;[2012-06-23 六 11:03]&quot;/&gt;
+&lt;meta name=&quot;author&quot; content=&quot;杨彬&quot;/&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&quot;/&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot;/&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+ &lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]&gt;*/--&gt;
+&lt;/style&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = &quot;code-highlighted&quot;;
+     elem.className   = &quot;code-highlighted&quot;;
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]&gt;*///--&gt;
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://orgmode.org/mathjax/MathJax.js&quot;&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: [&quot;MMLorHTML.js&quot;], jax: [&quot;input/TeX&quot;],
+            jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+        extensions: [&quot;tex2jax.js&quot;,&quot;TeX/AMSmath.js&quot;,&quot;TeX/AMSsymbols.js&quot;,
+                     &quot;TeX/noUndefined.js&quot;],
+        tex2jax: {
+            inlineMath: [ [&quot;\\(&quot;,&quot;\\)&quot;] ],
+            displayMath: [ ['$$','$$'], [&quot;\\[&quot;,&quot;\\]&quot;] ],
+            skipTags: [&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;],
+            ignoreClass: &quot;tex2jax_ignore&quot;,
+            processEscapes: false,
+            processEnvironments: true,
+            preview: &quot;TeX&quot;
+        },
+        showProcessingMessages: true,
+        displayAlign: &quot;center&quot;,
+        displayIndent: &quot;2em&quot;,
+
+        &quot;HTML-CSS&quot;: {
+             scale: 100,
+             availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;],
+             preferredFont: &quot;TeX&quot;,
+             webFont: &quot;TeX&quot;,
+             imageFont: &quot;TeX&quot;,
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    &quot;MML&quot;,
+                 Firefox: &quot;MML&quot;,
+                 Opera:   &quot;HTML&quot;,
+                 other:   &quot;HTML&quot;
+             }
+        }
+    });
+/*]]&gt;*///--&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;content&quot;&gt;
+
+&lt;h1 class=&quot;title&quot;&gt;追寻Higgs粒子&lt;/h1&gt;
+
+
+&lt;div id=&quot;table-of-contents&quot;&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id=&quot;text-table-of-contents&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-1&quot;&gt;1 前言  &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-2&quot;&gt;2 Higgs机制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-3&quot;&gt;3 Yang-Mills规范理论 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-4&quot;&gt;4 对称性自发破缺&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-5&quot;&gt;5 Higgs机制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-6&quot;&gt;6 寻找Higgs粒子&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-7&quot;&gt;7 Higgs粒子质量的理论限制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-8&quot;&gt;8 寻找Higgs粒子的实验&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-9&quot;&gt;9 Footnotes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;p&gt;所以我自己写了一个只有七个函数的简单包&lt;a href='https://files.dropbox.com/u/36755974/GR.m'&gt;GR&lt;/a&gt;, 可以计算Einstein张量, 克里斯多菲尔记号, 外尔张量等. 您可以随便改动或传播这个包, 不用注明出处. 需要提到的是, 这个包并非完全由我原创, 我是在看了James.Hartle的名著&lt;a href='http://web.physics.ucsb.edu/~hartle'&gt;Gravity: An Introduction to Einstein&amp;#8217;s General Relativity&lt;/a&gt;中附加的代码后, 将其封装成包. 当然如果您觉着好用, 感谢Hartle老先生好了, 譬如买他一本书.&lt;/p&gt;
+&lt;div id=&quot;outline-container-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;1&lt;/span&gt; 前言&lt;sup&gt;&lt;a class=&quot;footref&quot; name=&quot;fnr.1&quot; href=&quot;#fn.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup&gt;&lt;a class=&quot;footref&quot; name=&quot;fnr.2&quot; href=&quot;#fn.2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;sup&gt;&lt;a class=&quot;footref&quot; name=&quot;fnr.3&quot; href=&quot;#fn.3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1&quot;&gt;
 
-&lt;p&gt;* 使用方法&lt;/p&gt;
 
-&lt;p&gt;使用说明: 以Vaidya黑洞为例.&lt;/p&gt;
+&lt;p&gt;
+上世纪四十年代末，基于量子场论的量子电动力学的成功使基本粒子物理进入了一段迅速发展时期。然而很快整个领域便遇到了难以逾越的困难。1951年Kamefuchi 指出：弱相互作用的四费米子相互作用理论是不可重整化的。四费米子理论在最低阶近似下是没问题的，但是在下一阶近似下遇到了无法消除的无穷大。强相互作用中的问题与此不同。原则上 \(\pi\) 介子和核子间的Yukawa耦合在形式上是可重整化的(它的耦合常数是无量纲的)，然而由于相互作用很强使微扰方法无用武之地，因此无法用这些理论做实际计算。当时的弱相互作用和强相互作用理论的一个深层次问题是：这些理论都没有合理的理论基础，仅是非常唯象的理论。当时的弱相互作用理论仅仅是为了拟合当时的实验数据拼凑起来的，而强相互作用也缺乏赖以导出的第一性原理。同时Landau等人指出除了非相互作用粒子外，定域场论似乎无解，并且在有限的能量标度，跑动耦合常数趋于无穷，这即是著名的Landau极点(Landau pole)。这导致当时很多物理学家对为研究基本粒子物理而发展起来的量子场论丧失了信心。
+&lt;/p&gt;
+&lt;p&gt;
+这期间产生的三个杰出的思想带领量子场论走出了困境，并奠定了今天粒子物理的基础。这些思想分别是：夸克模型、定域规范对称性、对称性自发破缺。规范不变性的思想最早来自H.Weyl企图在几何上统一电磁相互作用和引力相互作用的不成功尝试。1954年杨振宁和Mills为了解释强相互作用，类比电磁相互作用的\(U(1)\)对称性，考虑同位旋守恒的\(SU(2)\)对称性。
+在Yang-Mills理论中，强相互作用中与电荷类似的“荷”是同位旋，而与光子类似的是三维矢量规范玻色子。\(SU(2)\)定域规范对称性与\(U(1)\)极为不同，\(SU(2)\)群是非阿贝尔群，因此规范“荷”是非对易的，并且规范玻色子之间存在自相互作用，这个理论是非线性的。
+Yang-Mills理论的另一个重要性在于它给出了一个确定基本粒子的耦合方式的原理。尽管Yang-Mills 理论简单优美，但它很明显并不可能是强相互作用的理论。
+因为正如Pauli早就指出的，为了保持规范不变性，规范玻色子必须是无质量的，而Yukawa更早前就指出强相互作用的短程性要求它由有质量的量子来传递。
+&lt;/p&gt;
+&lt;p&gt;
+在量子场论遇到困难时，许多物理学家将目光投向了对称性原理，因为由对称性原理无须知道相互作用的动力学也可作出很多理论预言。当时已经知道很多种对称性，然而其中一大部分对称性是破缺的近似对称性。物理学家普遍相信对称性原理是大自然最深层简单性的体现，那么为何会有近似对称性呢？或者说近似对称性是怎样来的？当时有人认为近似对称性是严格对称性自发破缺的结果。
+对称性自发破缺是指一个物理体系的拉氏量具有某种对称性，而其能量最低态—基态却不具有这种对称性。1961 年 Goldstone提出一条定理：每一个自发破缺的整体连续对称性都必然伴随一个无质量标量粒子 (称为Goldstone粒子)。这对近似对称性是严格对称性破缺结果的看法提出了重大挑战，因为如果那些近似对称性确实是严格对称性破缺的结果的话，那么应该存在相应的无质量粒子，然而实际上我们从没看到过这样的粒子。1964 年，Higgs证明如果对称性是定域对称性，则Goldstone粒子将会被一个有质量的粒子所取代。这一粒子现在被称为Higgs粒子。
+此后不久，F. Englert与 R. Brout证明了，如果一个定域对称性自发破缺，那么不仅Goldstone粒子，连矢量规范粒子也将获得质量。这就是著名的Higgs机制。随后 A. Salam 用Yang-Mills 模型及Higgs 机制构筑了一个可以用于弱相互作用的模型，这为Yang-Mills 模型提供了一个很强的范例。与之独立地，S.Weinberg 于1967用被Higgs机制破缺的定域\(SU(2)\times U(1)\)对称性给出了第一个将电磁与弱相互作用合二为一的具体模型。长期以来可重整性都被看作是一个合理的量子场论必须满足的关键条件，(现在人们对可重整性有了新看法：不可重整的场论可看作是有效场论)
+因而当七十年代初 'tHooft 和Veltman最终证明了有质量的Yang-Mills模型是可重整化的，规范场的量子理论被广泛接受，从而为粒子物理标准模型的建立奠定了坚实的基础。1983年电弱理论预言的传递弱作用的\(W^{\pm}\)和中间玻色子$Z^0$均被实验发现，然而Higgs 粒子迄今依然没有发现，这使得寻找Higgs粒子成为一个重要的粒子物理实验目标。
+&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;$$ds^{2}=-2f(u,v)dudv+r^{2}(u,v)d^{2}\Omega^{2}$$ 比如计算其Einstein张量:&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;$$Einstein[{0,-f[u,v],0,0},{-f[u,v],0,0,0},{0,0,r[u,v]^2,0},{0,0,0,r[u,v]^2Sin[\theta]^2},{u,v,\theta ,\phi}]$$.&lt;/p&gt;</content>
+&lt;div id=&quot;outline-container-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;2&lt;/span&gt; Higgs机制&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2&quot;&gt;
+
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3&lt;/span&gt; Yang-Mills规范理论&lt;sup&gt;&lt;a class=&quot;footref&quot; name=&quot;fnr.4&quot; href=&quot;#fn.4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;sup&gt;&lt;a class=&quot;footref&quot; name=&quot;fnr.5&quot; href=&quot;#fn.5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3&quot;&gt;
+
+
+&lt;p&gt;
+早在Einstein 将引力几何化后，H.Weyl 从中受到启发，尝试将电磁相互作用和引力相互作用统一在几何中。他注意到Einstein 在广义相对论中假定长度\(l=ds^2=g_{\mu\nu}dx^\mu dx^\nu\)是
+个不变量，Weyl 认为没有理由让长度一定是个不变量，更自然的假定是长度\(l\)是个时空函数：\(dl=-la\)，其中 \(a=\Sigma A_\mu dx^\mu\)是一次形式，\(A_\mu\)是可微函数。
+简而言之，Weyl 的观点是长度的标度(或者标尺即gauge 的原意)应该局域地定义，而物理规律应与标尺规定无关，
+即就是物理规律在gauge变换下不变。作gauge(标尺)变换：
+\[g_{\mu\nu}\mapsto g'_{\mu\nu}=\lambda(x)g_{\mu\nu}\]
+则
+\[\left.\begin{array}{c}
+    l \rightarrow l'=\lambda(x)l \hspace{25pt}dl'=-a'l'=-a'\lambda(x)l \\     dl'=d(\lambda l)=\lambda dl+ld\lambda =-\lambda la +ld\lambda =-(a-\frac{d\lambda}{\lambda})\lambda l  \\
+           \end{array}
+         \right\} \Rightarrow a'=a-\frac{d\lambda}{\lambda}\] 由于\(a=\Sigma A_\mu dx^\mu\)，故在此规范变换下\[A_\mu\rightarrow A'_\mu=A_\mu-\partial_\mu \lambda/\lambda\]
+而量\[F_{\mu\nu}\equiv \partial_\mu A_\nu-\partial_\nu A_\mu\]
+在此规范变化下不变，据此Weyl 认为\(A_\mu\)就是电磁势。然而由
+\[dl=-la\hspace{15pt}\Rightarrow\hspace{15pt}l_{x'^\mu}=l_{x^\mu}e^{-\int a}
+\]
+这表明除非 \(a\) 是恰当形式，否则长度是不可积的，这导致了一系列无法克服的困难，因此遭到了Einstein 等人的强烈批评，Weyl 因此放弃了这个理论。然而当量子力学建立后，1926 年Fock等人发现若将Weyl 的\(A_{\mu}(x)\)换作\((iq/\hbar c)A_{\mu}(x)\)，同时用波函数的相位变换取代标度变换，即定域相位变换下：
+\[\psi\rightarrow \psi'=\psi e^{i\chi(x)}\]
+
+若要求相应的动力学方程不变，则应有: \[\partial_\mu\rightarrow \mathcal{D}_\mu\equiv\partial_\mu+(iq/\hbar c)A_{\mu}\]这正是正则动量算符
+\(\hat{P}_\mu\equiv -i\hbar\partial_\mu\)在出现电磁场时的量子力学推广：
+\[\hat{P}_\mu\equiv -i\hbar\partial_\mu\rightarrow -i\hbar\mathcal{D}_\mu\equiv-i\hbar[\partial_\mu+(iq/\hbar c)A_{\mu}]\]
+这表明为了保持定域\(U(1)\)相位变换下动力学方程不变，要求引入一个新的微商算子\(\mathcal{D}_\mu\)，称为协变微商，它要求场\(A_\mu\)与\(\psi\)协同地变换。在\(\psi\)作变换(&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;)时
+要求
+\[\mathcal{D}_\mu\rightarrow \mathcal{D}'_\mu=\partial_\mu+\frac{iq}{\hbar c}A'_\mu \hspace{30pt}A_\mu\rightarrow A'_\mu=A_\mu-\frac{\hbar c}{q}\partial_\mu\chi(x)\]
+
+那么就有
+\[\mathcal{D}_\mu\psi\rightarrow(\mathcal{D}_\mu \psi)'=\mathcal{D}'_\mu\psi'=e^{i\chi(x)}\mathcal{D}_\mu\psi
+\]
+即表明在场\(\psi\)做定域规范变换(&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;)时，场\(A_\mu\)作相应的变换(&lt;a href=&quot;#4&quot;&gt;4&lt;/a&gt;)则有(&lt;a href=&quot;#5&quot;&gt;5&lt;/a&gt;)使动力学方程保持不变。规范不变性要求的协变微商中场\(A_\mu\)以一个联络项出现，这一项表达
+了电磁相互作用，它的形式由\(U(1)\)规范不变性完全确定，称为最小电磁耦合。需要注意三点：
+&lt;/p&gt;
+&lt;p&gt;
+1、\(U(1)\)定域变换不变性的要求规定了电磁作用的形式，表明Maxwell场本质上是$U(1)$规范场；
+&lt;/p&gt;
+&lt;p&gt;
+2、\(U(1)\)群是个阿贝尔群，因此\(U(1)\)规范场是阿贝尔规范场；
+&lt;/p&gt;
+&lt;p&gt;
+3、电磁场即\(U(1)\)规范场是无质量的，质量项的出现会破坏规范对称性。
+&lt;/p&gt;
+&lt;p&gt;
+为了简化公式的书写，以下使用自然单位制：\(\hbar =c=1\)。杨振宁和Mills
+将\(U(1)\)规范推广到非阿贝尔的\(SU(2)\)规范变换。考虑如下的拉氏量密度：
+\[
+ \mathcal{L}=i\bar{\psi}\gamma^\mu\partial_\mu\psi-m\bar{\psi}\psi
+\]
+其中 \[\psi\equiv \left(
+      \begin{array}{c}
+        \psi_1 \\
+        \psi_2 \\
+      \end{array}
+    \right)\] ，
+而\(\psi_1\)和\(\psi_2\)都是满足Dirac方程的四分量旋量。而\(m\)是质量。做规范变换：
+\[
+\psi\rightarrow U\psi \hspace{25pt}U\equiv e^{iH}
+\]
+其中\(H\)是Hermite矩阵：\(H=\theta1+\vec{\tau}\cdot\vec{a}\)，这里\(\vec{\tau}\)是Pauli矩阵，\(\vec{a}=(a_1,a_2,a_3)\)其中\(a_1,a_2,a_3\)均是实数。即
+\[
+U=e^{i\theta}e^{i\tau\cdot\vec{a}}
+\]
+其中\(\exp{(i\theta)}\)项是前面的\(U(1)\)变换，因此我们仅考虑关于 \(\exp{(i\tau\cdot\vec{a})}\)项的变换，这是一个\(SU(2)\)整体规范变换。
+因为拉氏量密度仅是场\(\psi\)和场的一阶导数\(\partial_\mu\psi\)的函数即\(\mathcal{L}(\partial_\mu\psi,\psi)\)，那么整体规范不变性即是说在变换：
+\[
+\psi\rightarrow S\psi \hspace{25pt}\partial_\mu\psi\rightarrow S\partial_\mu\psi \hspace{25pt}S\equiv e^{i\tau\cdot\vec{a}}
+\]
+下拉氏量密度保持不变。类比U(1)定域变换，杨振宁和Mills考虑了定域变换，
+令\(\vec{\lambda}(x)\equiv -\vec{a}(x)/q\)，其中q是耦合常数(类比于电荷)。则变换(&lt;a href=&quot;#7&quot;&gt;7&lt;/a&gt;)变成
+\[
+\psi\rightarrow S\psi \hspace{25pt}S=e^{-iq\vec{\tau}\cdot\vec{\lambda}(x)}
+\]
+即将常数S推广为坐标的函数，这就是SU(2)定域规范变换。这时：
+\[
+\partial_\mu\psi\rightarrow S\partial_\mu\psi+\left(\partial_\mu S\right)\psi
+\]
+多出来的项\((\partial_\mu S)\psi\)使得拉氏量密度\(\mathcal{L}(\partial_\mu\psi,\psi)\)在此变换下不再是不变的。为了保持它在此定域变换下不变，必须引入矢量场\(\vec{A}_\mu(x)\)，它是
+内部矢量空间中的\(N\times N\)矩阵。在作变换(&lt;a href=&quot;#9&quot;&gt;9&lt;/a&gt;)的同时使\(\vec{A}_\mu(x)\)做协同变换。与前面一样引入协变微商：
+\[
+\mathcal{D}_\mu\equiv\partial_\mu+iq\vec{\tau}\cdot\vec{A}_\mu
+\]
+如果要求此协变微商在变换(&lt;a href=&quot;#9&quot;&gt;9&lt;/a&gt;)下有如下的变换性质：
+\[
+  \mathcal{D}_\mu\psi\rightarrow S(\mathcal{D}_\mu\psi)
+\]
+那么由拉氏量\(\mathcal{L}(\partial_\mu\psi,\psi)\)在变换(&lt;a href=&quot;#14&quot;&gt;14&lt;/a&gt;)下的不变性可知拉氏量\(\mathcal{L}(\mathcal{D}_\mu\psi,\psi)\)在定域规范变换(&lt;a href=&quot;#9&quot;&gt;9&lt;/a&gt;)下也不变。
+和前面的U(1)规范不变性一样，SU(2)规范不变性要求出现一个规范场\(\vec{A}_\mu\)，它在协变微商中以联络项出现。这导致拉氏量密度(&lt;a href=&quot;#6&quot;&gt;6&lt;/a&gt;)变为：
+\[
+\mathcal{L}=i\bar{\psi}\gamma^\mu\mathcal{D}_\mu\psi-m\bar{\psi}\psi=\left[i\bar{\psi}\gamma^\mu\partial_\mu\psi-m\bar{\psi}\psi\right]-(q\bar{\psi}\gamma^\mu\vec{\tau}\psi)\cdot\vec{A}_\mu
+\]
+可见方括号内的原来的拉氏量密度，而最后一项称为耦合项。即与原来拉氏量密度(&lt;a href=&quot;#6&quot;&gt;6&lt;/a&gt;)相比出现了耦合项。
+由变换(&lt;a href=&quot;#12&quot;&gt;12&lt;/a&gt;)可得到$\vec{A}_\mu$相应的变换为：
+\[
+\vec{A}'_\mu=\vec{A}_\mu+\partial_\mu\vec{\lambda}+2q(\vec{\lambda}\times\vec{A}_\mu)
+\]
+这时场强的定义为：
+\[
+F^{\mu\nu}\equiv \partial^\mu \vec{A}^\nu-\partial^\nu\vec{A}^\mu-2q(\vec{A}^\mu\times\vec{A}^\nu)
+\]
+在规范变换下\(F^{\mu\nu}\)相应的变换为：
+\[
+    F^{\mu\nu}\rightarrow F^{\mu\nu}+2q(\vec{\lambda}\times F^{\mu\nu})
+\]
+场强\(F^{\mu\nu}\)的定义使得完整的拉氏量密度
+\[
+\mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+i\bar{\psi}\gamma^\mu\partial_\mu\psi-m\bar{\psi}\psi-(q\bar{\psi}\gamma^\mu\vec{\tau}\psi)\cdot\vec{A}_\mu
+\]
+在定域规范变换(&lt;a href=&quot;#9&quot;&gt;9&lt;/a&gt;)不变。规范不变性原理的重要之处在于它给出一个决定相互作用形式的原理，而不是唯象地根据由实验现象猜测假设相互作用的形式。但是规范不变性要求相应的规范场是无质量的，质量项在拉氏量密度中的出现将破坏规范不变性。这使得Yang-Mills理论似乎不是一个关于现实世界的理论。
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-4&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;4&lt;/span&gt; 对称性自发破缺&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-4&quot;&gt;
+
+
+&lt;p&gt;
+对称性自发破缺是指系统的哈密顿量具有某个对称性，而系统的某个基态却不具有此对称性。在量子力学中，基态被定义为能量最低的状态，而量子场论中的微扰计算就是从场的基态(真空态)开始做微扰进行计算相互作用。考虑拉氏量密度\(\mathcal{L}=T-V(\phi)\)，其中\(\phi(t,\vec{x})\)是标量场。
+将标量场写成：\(\phi(t,\vec{x})=\phi_{min}+\delta\phi(t,\vec{x})\)，将势\(V(\phi)\)关于场的最小值\(\phi_{min}\)(基态)展开到\(\delta\phi\)的二阶项，由于标量场的量纲是质量的量纲，而拉氏量密度\(\mathcal{L}\)的量纲是质量的四次方，因此展开式中二阶项的系数是质量平方的量纲，这项称为质量项，更高阶项是自相互作用项。
+如设势为\(V(\phi)=e^{-(\alpha\phi)^2}\)，(\(\alpha\)是一个实常数)
+则将势\(V(\phi)\)展开到\(\phi\)的四阶项得：\(V(\phi)=1-(\alpha\phi)^2+\frac{1}{2}(\alpha\phi)^4\)，因此场的质量为：\(m=\sqrt{2}\alpha\)。设对某个势\(V(\phi)\)展开后，拉氏量密度如下：
+\[
+\mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi+\frac{1}{2}\mu^2\phi^2-\frac{1}{4}\lambda^2\phi^4
+\]
+其中\(\mu\)和\(\lambda\)是实常数，因为在拉氏量中常数项对动力学无影响，已经丢掉了无关的常数项\(V(0)\)。这个拉氏量密度关于变换\(\phi\rightarrow -\phi\)是对称的。
+注意到拉氏量密度中质量项的符号是正的，因此对应的场质量是虚的。这是因为选择的展开点并不是场的能量最小值，即不是真正的基态。由于势\(V(\phi)\)为：
+\[
+V(\phi)=-\frac{1}{2}\mu^2\phi^2+\frac{1}{4}\lambda^2\phi^4  \hspace{25pt}\frac{\partial V}{\partial \phi}=0\Rightarrow \phi=0,\pm\frac{\mu}{\lambda}
+\]
+这个势的形状见Figrue1左，可看出\(\phi=0\)不是能量最低点，而是局域能量最高点。重新定义一个新的场变量：\(\eta\equiv\phi\pm\mu/\lambda\)，拉氏量可写为：
+\[
+\mathcal{L}=\frac{1}{2}\partial_\mu\eta\partial^\mu\eta-\mu^2\eta^2\pm\mu\lambda\eta^3-\frac{1}{4}\lambda^2\eta^4+\frac{1}{4}\frac{\mu^2}{\lambda}
+\]
+现在质量项是正的，场质量为：\(m=\sqrt{2}\mu\)。然而新的以\(\eta\)表示的拉氏量密度却并没有\(\eta\rightarrow -\eta\)的对称性。也就是说在系统的基态这个对称性已经破缺了。而这个
+破缺是一个自发的过程，并没有外在的影响，所以称为对称性自发破缺。这个破缺的对称性是分立对称性，我们更感兴趣的是连续对称性破缺。为此考虑如下的拉氏量密度：
+\[
+\mathcal{L}=\frac{1}{2}\partial_\mu\phi_1\partial^\mu\phi_1+\frac{1}{2}\partial_\mu\phi_2\partial^\mu\phi_2+\frac{1}{2}\mu^2(\phi_1^2+\phi_2^2)-\frac{1}{4}\lambda^2(\phi_1^2+\phi_2^2)^2
+\]
+这个拉氏量密度和前面的拉氏量密度完全类似，不过场变量有两个，由于拉氏量密度仅含有场\(\phi_1\)，\(\phi_2\)的平方和，所以拉氏量在\(\phi_1,\phi_2\)的空间中具有转动不变性，即对变换
+\[\left(
+  \begin{array}{c}
+    \phi_1' \\
+    \phi_2' \\
+  \end{array}\right)=\left(
+                \begin{array}{cc}
+                  \cos\theta &amp; \sin\theta\\
+                  -\sin\theta &amp; \cos\theta \\
+                \end{array}
+              \right)\left(
+                       \begin{array}{c}
+                         \phi_1 \\
+                         \phi_2 \\
+                       \end{array}
+                     \right)\]
+具有不变性，这是SO(2)对称性。其中势\(V(\phi_1,\phi_2)\)为：
+\[
+V(\phi_1,\phi_2)=-\frac{1}{2}\mu^2(\phi_1^2+\phi_2^2)+\frac{1}{4}\lambda^2(\phi_1^2+\phi_2^2)^2
+\]
+\[
+\frac{\partial V}{\partial(\phi_1^2+\phi_2^2)}=0 \Rightarrow \phi_{1_{min}}^2+\phi_{2_{min}}^2=\frac{\mu^2}{\lambda^2}
+\]
+这个势的形状见Figrue1右。为了进行微扰计算，必须选定一个具体的基态，如：
+\(\phi_{1_{min}}=\mu/\lambda,\phi_{2_{min}}=0\)。注意到场\(\phi_{1_{min}},\phi_{2_{min}}\)
+的质量都是虚的，为此引入新的场变量：
+\[
+\eta\equiv\phi_1-\frac{\mu}{\lambda} \hspace{30pt} \xi\equiv\phi_2
+\]
+这时拉氏量密度可写为：
+\[
+\mathcal{L}=\left[\frac{1}{2}\partial_\mu\eta\partial^\mu\eta-\mu^2\eta^2\right]+\left[\frac{1}{2}\partial_\mu\xi\partial^\mu\xi\right]+
+\left[\mu\lambda(\eta^3+\eta\xi^2)-\frac{\lambda^2}{4}(\eta^4+\xi^4+2\eta^2\xi^2)\right]+\frac{\mu^4}{4\lambda^2}
+\]
+其中第一项自由标量场的拉氏量密度，场质量为\(m_\eta=\sqrt{2}\mu\)；第二项仅有动能项，对应的质量项为零，即\(m_\xi=0\)；第三项是场的自相互作用项和场之间的相互作用项。
+注意到基态的全体是在\(\phi_1,\phi_2\)空间旋转不变的，而对一个具体的基态，这个连续的整体对称性并不存在，也就是说对称性自发破缺了。
+这正是Goldstone定理的一个特例，即任何一个整体连续对称性的破缺必然伴随着出现一个无质量的标量(因而零自旋)粒子，即Goldstone玻色子。正是这条定理使我们将近似对称性看作严格对称性破缺而来造成了困难。因为如果近似对称性真是严格对称性破缺的结果的话，我们应该观测到相应的Goldstone玻色子，但实际上却并没有这些玻色子。然而当考虑定域连续对称性时，问题得到了解决，这就是Higgs机制的结果。
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-5&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-5&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;5&lt;/span&gt; Higgs机制&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-5&quot;&gt;
+
+
+&lt;p&gt;
+规范对称性和自发性对称破缺都遇到了无质量粒子的困难，规范不变性要求相应的规范场是无质量的，而核力却是短程力；对称性自发破缺要求产生无质量的Goldstone玻色子，而实际上并没看到这些粒子。然而当将规范场的概念和对称性自发破缺的概念结合在一个理论中时，这两个问题竟然同时解决了。
+&lt;/p&gt;
+&lt;p&gt;
+考虑(&lt;a href=&quot;#21&quot;&gt;21&lt;/a&gt;)的拉氏量密度，但是用两个实场\(\phi_1,\phi_2\)定义一个复场\(\phi\)：
+\[
+\phi\equiv\phi_1+i\phi_2 \hspace{25pt}\Rightarrow \phi^\ast\phi=\phi_1^2+\phi_2^2
+\]
+以\(\phi\)的形式重写拉氏量密度：
+\[
+\mathcal{L}=\frac{1}{2}\partial_\mu\phi^\ast\partial^\mu\phi+\frac{1}{2}\mu^2(\phi^\ast\phi)-\frac{1}{4}\lambda^2(\phi^\ast\phi)^2
+\]
+这时\(\phi_1,\phi_2\)空间的SO(2)旋转不变性变为U(1)相位变换：
+\[
+\phi\rightarrow e^{i\theta}\phi
+\]
+这和我们前面考虑过的U(1)变换非常类似，仅仅是以复标量场\(\phi\)代替了旋量场\(\psi\)。同样要求拉氏量密度具有定域规范不变性：
+\[
+\phi \rightarrow e^{i\theta(x)}\phi
+\]
+则需要引入无质量的规范场\(A_\mu\)和协变微商：\(D_\mu=\partial_\mu+iqA_\mu\)，而拉氏量密度成为：
+\[
+\mathcal{L}=\frac{1}{2}D_\mu\phi^\ast D^\mu\phi+\frac{1}{2}\mu^2(\phi^\ast\phi)-\frac{1}{4}\lambda^2(\phi^\ast\phi)^2-\frac{1}{4}F^2
+\]
+同样注意到复标量场的质量是虚的，跟前面完全一样，引入新场变量： \[\eta\equiv\phi_1-\mu/\lambda \hspace{20pt} \xi\equiv\phi_2\]后，
+拉氏量密度成为：
+\[
+\begin{split}
+\mathcal{L}=&amp;\left[\frac{1}{2}\partial_\mu\eta\partial^\mu\eta-\mu^2\eta^2\right]+\left[\frac{1}{2}\partial_\mu\xi\partial^\mu\xi\right]
++\left[-\frac{1}{4}F^2+\frac{1}{2}(\frac{q\mu}{\lambda})^2A_\mu A^\mu\right]   \\
+&amp;-2i(\frac{q\mu}{\lambda})(\partial_\mu\xi)A^\mu+ \left[q(\eta\partial_\mu\xi-\xi\partial_\mu\eta)A^\mu+\frac{\mu}{\lambda}q^2\eta(A_\mu A^\mu)\right. \\
+&amp;+ \left.\frac{1}{2}q^2(\xi^2+\eta^2)A_\mu A^\mu-\lambda\mu(\eta^3+\eta\xi^2)-\frac{1}{4}\lambda^2(\eta^4+2\eta^2\xi^2+\xi^4)\right] +(\frac{\mu^2}{2\lambda^2})^2
+\end{split}
+\]
+其中第一项是自由标量场的拉氏量密度，场质量为\(m_\eta=\sqrt{2}\mu\)；而第二项是无质量的Goldstone玻色子的拉氏量密度；第三项描述自由规范场\(A_\mu\)，但是它得到了一个质量\(m_A=\frac{q\mu}{\lambda}\)。倒数第二项是场\(\eta,\xi,A_\mu\)之间的耦合项，它们的耦合方式也被确定了。尽管规范场的质量问题解决了，然而无质量的Goldstone玻色子依然存在，但这可以通过选取一个特殊的规范变换消除掉，因为拉氏量密度是定域规范不变的。定域规范变换为：
+\[
+\begin{split}
+\phi\rightarrow \phi'&amp;=(\cos\theta+i\sin\theta)(\phi_1+i\phi_2) \\
+&amp;=(\phi_1\cos\theta-\phi_2\sin\theta)+i(\phi_1\sin\theta+\phi_2\cos\theta)
+\end{split}
+\]
+当选取\(\theta=-\tan^{-1}(\phi_2/\phi_1)\)时，变换后的场\(\phi'\)的虚部为零，即\(\xi=0\)。这时拉氏量密度为：
+\[
+\begin{split}
+\mathcal{L}=&amp;\left[\frac{1}{2}\partial_\mu\eta\partial^\mu\eta-\mu^2\eta^2\right]+\left[-\frac{1}{4}F^2+\frac{1}{2}(\frac{q\mu}{\lambda})^2A_\mu A^\mu\right] \\
+&amp;+\left[\frac{\mu}{\lambda}q^2\eta(A_\mu A^\mu)+ \frac{1}{2}q^2\eta^2A_\mu A^\mu-\lambda\mu\eta^3-\frac{1}{4}\lambda^2\eta^4\right] +(\frac{\mu^2}{2\lambda^2})^2
+\end{split}
+\]
+这时拉氏量密度中仅含有质量标量场\(\eta\)，和有质量的规范场\(A_\mu\)。其中\(\eta\)场的量子称为Higgs粒子，这个机制成为Higgs机制。在这个过程中无质量的规范场只有两个自由度(对应两个横向极化方向)，而当它得到质量时也增加一个自由度(纵向自由度)，而这个增加的自由度来自于消失的Goldstone玻色子。有时人们形象的说规范场吃掉了Goldstone玻色子得到了质量。这个机制是规范不变性和对称性自发破缺联合作用的结果。通过要求拉氏量密度的定域规范不变性引入规范场\(A_\mu\)，而后采取特殊的规范变换(这相当于选取一个特定的基态，对于量子场论的微扰展开计算这也是必须的)，产生对称性自发破缺，从而使无质量的规范场得到质量。
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-6&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;6&lt;/span&gt; 寻找Higgs粒子&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-6&quot;&gt;
+
+
+&lt;p&gt;
+由于粒子物理标准模型中，所有粒子都与Higgs场耦合从而得到质量，因此实验上直接观测到Higgs粒子存在的证据才能使标准模型得到最终确立。另外现在很多的关键物理问题都依赖于标量场的概念(如暗能量的一些模型和Boson星)，但是标量场却从没在实验上直接观测到。Higgs粒子的发现将表明标量场真的存在，而非仅仅是理论的想象。鉴于Higgs粒子的这些重要影响，寻找Higgs粒子一直以来都是实验粒子物理的最主要目标。
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-7&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-7&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;7&lt;/span&gt; Higgs粒子质量的理论限制&lt;sup&gt;&lt;a class=&quot;footref&quot; name=&quot;fnr.6&quot; href=&quot;#fn.6&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-7&quot;&gt;
+
+
+&lt;p&gt;
+假定在微扰理论失效和新物理出现之前的能标中，标准模型是适用的。那么，如果Higgs粒子的质量\(M_H&amp;lt; 1 Tev\)则纵W和Z玻色子将会有很强的相互作用，为了保证它们在高能散射中的幺正性，进一步要求\(M_H\sim 710 Gev\)。另外Higgs场的四阶自耦合作用随能量的增长而呈对数发散，这要求给出一个截断，由于四阶自耦合被\(M_H\)决定，因此条件\(M_H\sim \Lambda\)给Higgs粒子的质量设置了一个上限\(M_H\sim 630 Gev\)。如果要求标准模型在大统一能标以下适用，则\(\Lambda\sim 10^{16}Gev\)，Higgs粒子的质量应在\(130 Gev\sim M_H \sim 180 Gev\)。
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-8&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-8&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;8&lt;/span&gt; 寻找Higgs粒子的实验&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-8&quot;&gt;
+
+
+&lt;p&gt;
+在欧洲核子中心(CERN)的大型强子对撞机(Large Hadron Collider LHC)建成之前，寻找Higgs粒子的实验在CERN的大型正负电子对撞机(Large Electron–Positron Collider LEP)和美国费米实验室的Tevatron上进行。LEP从1989年开始运行到2000年终止运行，在它所能达到的能量范围内并没发现Higgs粒子。
+&lt;/p&gt;
+&lt;p&gt;
+LEP通过Higgs–strahlung 过程：
+\(e^+e^-\rightarrow H+ Z\)来寻找Higgs粒子，其中Z粒子是已知的基本粒子，质量约为\(91 Gev\)，而LEP的质心能量在后期改进后最高可达\(\sqrt{s}=209 Gev\)，因此它只能寻找质量小于\(118 Gev\)的Higgs粒子，如果Higgs粒子的质量比这个质量大，那么在LEP上是无法看到它的。LEP是环形加速器，在其环上有四个大型探测器Aleph、Delphi、Opal和L3。每个探测器都有一个联合实验小组分析数据。类似标准模型Higgs粒子在LEP上产生机制主要为：
+&lt;/p&gt;
+&lt;p&gt;
+(a)轫致辐射过程：\(e^+e^-\rightarrow (Z)\rightarrow Z+H\)，即正负电子对撞产生Z，Z再释放出H；
+&lt;/p&gt;
+&lt;p&gt;
+(b)WW聚变过程：\(e^+e^-\rightarrow \nu\overline{\nu}(WW)\rightarrow \nu\overline{\nu}+H\) ；
+&lt;/p&gt;
+&lt;p&gt;
+(c)ZZ聚变过程：\(e^+e^-\rightarrow e^+e^-(ZZ)\rightarrow e^+e^-+H\)；
+&lt;/p&gt;
+&lt;p&gt;
+(d)顶夸克辐射过程：\(e^+e^-\rightarrow (\gamma,Z)\rightarrow t\overline{t}+H\)。
+&lt;/p&gt;
+
+&lt;p&gt;
+2002年夏，LEP的四个实验小组公布的最终结果为&lt;sup&gt;&lt;a class=&quot;footref&quot; name=&quot;fnr.7&quot; href=&quot;#fn.7&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;：在95\%的置信度上\(M_H\geq 114.4 Gev\)。
+&lt;/p&gt;
+&lt;p&gt;
+标准模型Higgs粒子在强子对撞机上的产生机制主要为：
+&lt;/p&gt;
+&lt;p&gt;
+(a)胶子聚变：\(gg\rightarrow H\)，两个高能胶子分别称为正反顶夸克对，其中一个胶子产生的顶夸克和另一个胶子产生的反顶夸克聚变形成中性Higgs粒子然后衰变为正反底夸克对：
+\(H\rightarrow b\overline{b}\)；
+&lt;/p&gt;
+&lt;p&gt;
+(b)与W/Z协同产生：\(q\overline{q}\rightarrow V+H\)，V为W/Z；
+&lt;/p&gt;
+&lt;p&gt;
+(c)矢量Bosons聚变(Vector Boson Fusion VBF)：\(VV\rightarrow H\)；
+&lt;/p&gt;
+&lt;p&gt;
+(d)与顶夸克－反顶夸克对协同产生：\(gg,q\overline{q}\rightarrow Q\overline{Q}+H\)。
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-9&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-9&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;9&lt;/span&gt; Footnotes&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-9&quot;&gt;
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;footnotes&quot;&gt;
+&lt;h2 class=&quot;footnotes&quot;&gt;Footnotes: &lt;/h2&gt;
+&lt;div id=&quot;text-footnotes&quot;&gt;
+&lt;p class=&quot;footnote&quot;&gt;&lt;sup&gt;&lt;a class=&quot;footnum&quot; name=&quot;fn.1&quot; href=&quot;#fnr.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Steven Weinberg Eur.Phys.J.C34:5-13,2004
+&lt;/p&gt;
+&lt;p class=&quot;footnote&quot;&gt;&lt;sup&gt;&lt;a class=&quot;footnum&quot; name=&quot;fn.2&quot; href=&quot;#fnr.2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; Gerard 't Hooft  arXiv: hep-th/9812203v2 (lecture notes Erice)
+&lt;/p&gt;
+&lt;p class=&quot;footnote&quot;&gt;&lt;sup&gt;&lt;a class=&quot;footnum&quot; name=&quot;fn.3&quot; href=&quot;#fnr.3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Tian Yu Cao Conceptual Developments of 20th Century Field Theories Cambridge University Press 1997
+&lt;/p&gt;
+&lt;p class=&quot;footnote&quot;&gt;&lt;sup&gt;&lt;a class=&quot;footnum&quot; name=&quot;fn.4&quot; href=&quot;#fnr.4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; David Griffiths Introduction To Elementary Particles Harper \&amp;amp; Row Publishers 1987
+&lt;/p&gt;
+&lt;p class=&quot;footnote&quot;&gt;&lt;sup&gt;&lt;a class=&quot;footnum&quot; name=&quot;fn.5&quot; href=&quot;#fnr.5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; 戴元本  《相互作用的规范理论》 科学出版社   2005 第二版
+&lt;/p&gt;
+&lt;p class=&quot;footnote&quot;&gt;&lt;sup&gt;&lt;a class=&quot;footnum&quot; name=&quot;fn.6&quot; href=&quot;#fnr.6&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; Abdelhak Djouadi Pramana62:191-206,2004
+&lt;/p&gt;
+&lt;p class=&quot;footnote&quot;&gt;&lt;sup&gt;&lt;a class=&quot;footnum&quot; name=&quot;fn.7&quot; href=&quot;#fnr.7&quot;&gt;7&lt;/a&gt;&lt;/sup&gt; The LEP Higgs Working Group, Note/2002-01 for the SM and Note/2002-04 for the MSSM
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;postamble&quot;&gt;
+&lt;p class=&quot;author&quot;&gt; Author: 杨彬
+&lt;/p&gt;
+&lt;p class=&quot;date&quot;&gt; Date: [2012-06-23 六 11:03]&lt;/p&gt;
+&lt;p class=&quot;creator&quot;&gt;HTML generated by org-mode 7.4 in emacs 23&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
  </entry>
  
  
