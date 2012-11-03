@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title>关于博客</title>
+   <title>Gauge Gravity</title>
    <meta name="author" content="YangBin" />
    <link href="http://feeds.feedburner.com/tom-preston-werner" rel="alternate" title="YangBin" type="application/atom+xml" />
 
@@ -103,15 +103,29 @@ var WRInitTime=(new Date()).getTime();
   </div>
   
   <div id="post">
-<h1 id='id176'>关于博客</h1>
+<h1 id='id173'>规范引力</h1>
 
-<p>之前一直在使用wordpress, 那是个非常漂亮的博客程序, 可以做出非常漂亮的效果, 比如<em>科学松鼠会</em>就是用它写的. 几个月之前我看到阮一峰写的<a href='http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html'>搭建一个免费的，无限流量的Blog&#8212;-github</a>, 当时非常感兴趣, 但是那时忙着毕业, 忙着找工作, 腾不出时间, 再者觉得作为个人博客来说wordpress足够了, 于是就放下折腾的心, 没有在git上建博客.</p>
+<p>四种基本相互作用中有三种都可以看作是规范场, 那么引力能否看作是规范场？</p>
 
-<p>但是我知道git是个非常伟大的东西, 一直心向往之, 但总是无缘. 最近有点时间, 又加上我的wordpress博客的服务器又挂掉了, 终于忍无可忍, 开始折腾, 看来我就是折腾的命. 不过这次折腾收获非同小可, 第一, 这次折腾后以后估计就不用再折腾了, 因为我发现git+jekyll实在是太好用了, 简洁简单, 只要打开Emacs就能搞定一切! 彻底实现了我写博客不离开Emacs的愿望. 再次, org-mode能随心所欲的整合进来, 让个人wiki变得漂亮而有效率.</p>
+<p>在1954年<em>Yang-Mills</em>提出<em>SU(2)</em>群作为强相互作用的规范群. 在此之前, 粒子物理中构造相互作用的拉氏量都是基于唯像的考虑, 而规范不变性原理的重要之处就在于它给出了决定相互作用形式的指导原则. 这是一个重大的进展.</p>
 
-<p>对我而言, 一个需要注意的地方就是数学公式. 在wordpress上我通过安装一个Mathjax插件来生成latex公式, 这个方式生成的公式不是一整张图片, 而是非常类似字体形式的数学公式. 同样我在现在这个页面的css文件中也使用Mathjax. 这个方法有个缺点, 早先我发现我的wordpress博客非常慢, 总是好等很久才能打开首页, 这是因为Mathjax插件只是在网页的css中插入一行, 告诉浏览器遇到latex公式命令就到一个Mathjax的网页上去解析, 然后那个网站回传信息告诉浏览器如何渲染公式. 当然这时你的浏览器显示公式的速度就和你的网速相关了, 如果网速慢, 那你就等着吧! 同样的问题我也在这里遇到了, 这次我发现速度慢的令人不能接受, 这也怪我那篇文章中公式太多了. 而且公式显示还有问题, 有些本来该换行的公式没换行, 就那么放着, 见头不见尾. 实在难看, 但是同样的公式我在org-mode下直接写出来生成html格式就没有任何问题. 看来对公式多的文章, 两个办法, 要么直接生成pdf, 本来博客就不是贴正经学术文章的地方; 要么就直接用org-mode生成html, 然后直接存在_post底下搞定. 看了源文件我发现实际上org-mode和我加在css文件中的Mathjax的服务器不是一个服务器, 随即换成org-mode默认的服务器, 感觉打开网页是快了一点.</p>
+<p>但是<em>Pauli</em>很早前就指出, 为了保持规范不变性, 规范玻色子必须是无质量的, 但<em>Yukawa</em>更早前就指出强相互作用的短程性要求它由有质量的粒子来传递. 这样一来, <em>Yang-Mills</em>理论在当时看起来并不像是一个现实的理论, 因此并未受重视.</p>
 
-<p>刚开始想使用octopress模板搭建这个网站, 克服种种困难之后发现在本地运行octopress模板jekyll总是报错, 算了, 直接用默认的模板, 是简单了些, 以后再处理.</p>
+<p>我们知道广义协变原理(这里取自<em>Weinberg</em> <em>《Gravitation and Cosmology》</em>)尽管采取了一个不变性原理的形式, 但其实际内容只局限于对某一特定的场的相互作用加上一个限制. 因此实际上广义协变性原理是一个动力学对称性. 而规范不变性也是一个动力学对称性. 这自然猜想将引力看作是一种规范场.</p>
+
+<p>规范场的想法是使用一个对称群来限制相互作用的形式, 但是怎么选择规范群却并无章法可循, 只能根据选择后的结果和实验是否一致来确定所选择的规范对称性是否正确.</p>
+
+<p>1956年<em>Utiyama</em>尝试将引力描述为规范场, 他提出将定域<em>Lorentz</em>群<em>SO(3,1)</em>作为引力的规范对称群.</p>
+
+<p>1961年<em>Kibble</em>将引力的规范对称群推广到<em>Poincare</em>群. 称为<em>Einstein-Cartan-Sciama-Kibble(ECSK)</em>理论.</p>
+
+<p>ECSK理论中<em>Torsion</em>只跟物质的自旋有关, 它们之间的关系是一个代数关系. 这表明在真空中, <em>Torsion</em>为零, 即它不能传播.</p>
+
+<p>1980年<em>Helh</em>等人在拉氏量中增加<em>Torsion</em>的二阶项, 使得<em>Torsion</em>可以传播, 但是<em>torsion</em>的源却不仅有自旋还有轨道角动量. 称为<em>Poincare Gravity Theory (PGT理论)</em>.</p>
+
+<p>1982年<em>Stelle</em>考虑将<em>de Sitter</em>群<em>SO(3,2)</em>作为引力的规范群, 它在自发性对称性破缺下为<em>SO(3,1)Lorentz</em>群.</p>
+
+<p>1984年又有人考虑将<em>O(5)</em>群作为引力的规范对称群.</p>
 </div>
 
 <div id="related">
@@ -120,9 +134,9 @@ var WRInitTime=(new Date()).getTime();
     
       <li><span>12 Oct 2012</span> &raquo; <a href="/2012/10/12/warp-deriver.html">超越光速——Alcubierre drive</a></li>
     
-      <li><span>12 Apr 2012</span> &raquo; <a href="/2012/04/12/Monte-method-Pi.html">Monte Method Pi</a></li>
+      <li><span>07 Oct 2012</span> &raquo; <a href="/2012/10/07/about-blog.html">关于博客</a></li>
     
-      <li><span>24 Jul 2011</span> &raquo; <a href="/2011/07/24/time-machine.html">时间机器</a></li>
+      <li><span>12 Apr 2012</span> &raquo; <a href="/2012/04/12/Monte-method-Pi.html">Monte Method Pi</a></li>
     
   </ul>
   
