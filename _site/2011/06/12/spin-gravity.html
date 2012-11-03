@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title>关于博客</title>
+   <title>Spin Gravity</title>
    <meta name="author" content="YangBin" />
    <link href="http://feeds.feedburner.com/tom-preston-werner" rel="alternate" title="YangBin" type="application/atom+xml" />
 
@@ -103,15 +103,23 @@ var WRInitTime=(new Date()).getTime();
   </div>
   
   <div id="post">
-<h1 id='id25'>关于博客</h1>
+<h1 id='id21'>自旋引力相互作用</h1>
 
-<p>之前一直在使用wordpress, 那是个非常漂亮的博客程序, 可以做出非常漂亮的效果, 比如<em>科学松鼠会</em>就是用它写的. 几个月之前我看到阮一峰写的<a href='http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html'>搭建一个免费的，无限流量的Blog&#8212;-github</a>, 当时非常感兴趣, 但是那时忙着毕业, 忙着找工作, 腾不出时间, 再者觉得作为个人博客来说wordpress足够了, 于是就放下折腾的心, 没有在git上建博客.</p>
+<p>两个费米子之间除了磁相互作用, 是否还有自旋引起的引力相互作用？</p>
 
-<p>但是我知道git是个非常伟大的东西, 一直心向往之, 但总是无缘. 最近有点时间, 又加上我的wordpress博客的服务器又挂掉了, 终于忍无可忍, 开始折腾, 看来我就是折腾的命. 不过这次折腾收获非同小可, 第一, 这次折腾后以后估计就不用再折腾了, 因为我发现git+jekyll实在是太好用了, 简洁简单, 只要打开Emacs就能搞定一切! 彻底实现了我写博客不离开Emacs的愿望. 再次, org-mode能随心所欲的整合进来, 让个人wiki变得漂亮而有效率.</p>
+<p>也就是说, 引力相互作用是否和自旋相关？</p>
 
-<p>对我而言, 一个需要注意的地方就是数学公式. 在wordpress上我通过安装一个Mathjax插件来生成latex公式, 这个方式生成的公式不是一整张图片, 而是非常类似字体形式的数学公式. 同样我在现在这个页面的css文件中也使用Mathjax. 这个方法有个缺点, 早先我发现我的wordpress博客非常慢, 总是好等很久才能打开首页, 这是因为Mathjax插件只是在网页的css中插入一行, 告诉浏览器遇到latex公式命令就到一个Mathjax的网页上去解析, 然后那个网站回传信息告诉浏览器如何渲染公式. 当然这时你的浏览器显示公式的速度就和你的网速相关了, 如果网速慢, 那你就等着吧! 同样的问题我也在这里遇到了, 这次我发现速度慢的令人不能接受, 这也怪我那篇文章中公式太多了. 而且公式显示还有问题, 有些本来该换行的公式没换行, 就那么放着, 见头不见尾. 实在难看, 但是同样的公式我在org-mode下直接写出来生成html格式就没有任何问题. 看来对公式多的文章, 两个办法, 要么直接生成pdf, 本来博客就不是贴正经学术文章的地方; 要么就直接用org-mode生成html, 然后直接存在_post底下搞定. 看了源文件我发现实际上org-mode和我加在css文件中的Mathjax的服务器不是一个服务器, 随即换成org-mode默认的服务器, 感觉打开网页是快了一点.</p>
+<p><em>Lorentz</em>群有两个不变量(<em>Casimir</em>算符)：<strong>质量和自旋</strong>. 而三种基本相互作用(强电弱相互作用)都是自旋相关的, 那么引力相互作用是否是自旋相关的？</p>
 
-<p>刚开始想使用octopress模板搭建这个网站, 克服种种困难之后发现在本地运行octopress模板jekyll总是报错, 算了, 直接用默认的模板, 是简单了些, 以后再处理.</p>
+<p>这里我们需要考虑两个问题：</p>
+
+<p>1. 自旋能否产生引力场？</p>
+
+<p>2. 自旋能否被引力场作用？</p>
+
+<p>第一个问题, 我们知道自旋具有角动量, 而在广义相对论中角动量会产生引力磁场. 因此自旋应能产生引力场. 实际上我们能通过能动张量定义一个自旋角动量(正如<em>S.Weinberg</em>在其<em>《Gravitation and Cosmology》</em>所做的). 而能动张量是引力场的源, 那么自旋也应是引力场的源.</p>
+
+<p>对第二个问题, 如果引力场对点粒子的自旋产生作用, 那么该点粒子可以通过这个效应区分出自己处在引力场中. 这违反等效原理. 但是如果我们将等效原理的含义(见Weinberg的书)解释为：再给定的点可以构造局域惯性系, 使得度规张量的一阶导数为零. 那么自旋受到引力相互作用并不影响等效原理.</p>
 </div>
 
 <div id="related">
@@ -120,9 +128,9 @@ var WRInitTime=(new Date()).getTime();
     
       <li><span>12 Oct 2012</span> &raquo; <a href="/2012/10/12/warp-deriver.html">超越光速——Alcubierre drive</a></li>
     
-      <li><span>12 Apr 2012</span> &raquo; <a href="/2012/04/12/Monte-method-Pi.html">Monte Method Pi</a></li>
+      <li><span>07 Oct 2012</span> &raquo; <a href="/2012/10/07/about-blog.html">关于博客</a></li>
     
-      <li><span>25 Jul 2011</span> &raquo; <a href="/2011/07/25/parallel-universes.html">Parallel Universes</a></li>
+      <li><span>12 Apr 2012</span> &raquo; <a href="/2012/04/12/Monte-method-Pi.html">Monte Method Pi</a></li>
     
   </ul>
   
