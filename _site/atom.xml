@@ -4,7 +4,7 @@
  <title>YangBin</title>
  <link href="http://yangbin.tk/atom.xml" rel="self"/>
  <link href="http://yangbin.tk/"/>
- <updated>2012-11-03T16:45:59+08:00</updated>
+ <updated>2012-11-03T19:42:32+08:00</updated>
  <id>http://yangbin.tk/</id>
  <author>
    <name>YangBin</name>
@@ -62,7 +62,7 @@
    <link href="http://yangbin.tk/2012/10/07/about-blog.html"/>
    <updated>2012-10-07T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2012/10/07/about-blog</id>
-   <content type="html">&lt;h1 id='id35'&gt;关于博客&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id11'&gt;关于博客&lt;/h1&gt;
 
 &lt;p&gt;之前一直在使用wordpress, 那是个非常漂亮的博客程序, 可以做出非常漂亮的效果, 比如&lt;em&gt;科学松鼠会&lt;/em&gt;就是用它写的. 几个月之前我看到阮一峰写的&lt;a href='http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html'&gt;搭建一个免费的，无限流量的Blog&amp;#8212;-github&lt;/a&gt;, 当时非常感兴趣, 但是那时忙着毕业, 忙着找工作, 腾不出时间, 再者觉得作为个人博客来说wordpress足够了, 于是就放下折腾的心, 没有在git上建博客.&lt;/p&gt;
 
