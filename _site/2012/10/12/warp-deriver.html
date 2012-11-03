@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>超越光速——Alcubierre drive</title>
+   <meta name="author" content="YangBin" />
+   <link href="http://feeds.feedburner.com/tom-preston-werner" rel="alternate" title="YangBin" type="application/atom+xml" />
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+
+   <!-- Typekit -->
+   <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script>
+   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+   <!-- Mathjax 
+   <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+   </script>
+
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+   </script>
+
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+   </script>
+
+   <script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+   </script>
+   -->
+   <script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<!-- ClickTale Top part -->
+<script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script>
+<!-- ClickTale end of Top part -->
+
+<div class="site">
+  <div class="title">
+    <a href="/">YangBin's Horizon</a>
+    <a class="extra" href="/">home</a>
+  </div>
+  
+  <div id="post">
+<h1 id='alcubierre_drive'>超越光速——Alcubierre drive<sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup></h1>
+
+<p>当前可见宇宙有137亿光年, 而狭义相对论又指出光速是宇宙的速度极限. 如果将来我们制造出了速度能非常接近光速的飞船, 你猜去半人马星座要多长时间?半人马星座距我们有4.2光年之遥, 它是离我们最近的恒星, 因此在其周围可能存在文明. 你可能马上给出答案: 大约四五年. 这个答案也对, 也不对. 说它对, 是因为在地球上的人看来, 的确需要这么久, 但是对飞船上的人来说, 这段旅程花去的时间可以任意短. 这是由于狭义相对论的时钟延缓效应. 对速度恒为光速的光子而言, 这段距离花费的时间为零, 因为光子走测地线, 固有时为零. 听起来不错！适当调整飞船的速度, 你可以在任意短的时间里到达半人马座！但是别太高兴, 在这段旅途中, 飞船其实是一架飞往未来的时间机器！等你在半人马座作了半年考察, 返回地球, 你发现你回到的是十年后的地球！十年了, 总统都换了两届了, 真是令人唏嘘啊！先别伤感, 更严重的事情才刚开始.</p>
+
+<p>你略作休息, 领导找你谈话. 首先, 他高度评价了你的工作；然后, 你被告知: 由于你是国内唯一具有星际飞行经验的人, 因此组织上将派你执行一次更为艰巨的任务, 你将前往银河系中心去考察那里是否真的存在一个巨大的黑洞. 你说: 银河系中心?那离地球30100光年啊！领导说: 没错, 是很远, 你要克服困难, 不要辜负组织上对你的信任.</p>
+
+<p>你心里非常清楚, 对你而言, 这段旅程并不长, 但是当你回来, 地球已过了60000多年, 那时候还能有人类吗?毕竟人类文明的历史才不过10000多年. 当你凯旋归来(这是零阶近似情况, 在一阶情况下, 我们应该考虑你被外星人俘虏, 或者飞船半路掉链子的情况. ), 你已无家可归！这样看来, 昙花一现般的人类文明, 注定只能被禁闭在太阳系中.</p>
+
+<p>其实我们还有一条出路: <strong>超光速飞行！</strong>对教条主义者, 既然<em>Einstein</em>老人家的狭义相对论已经禁止了超光速, 再考虑这种情况就是民科了. 对此我们应记住<em>Feynman</em>的话: <strong>做物理, 一定要保持一个开放的态度.</strong></p>
+
+<p>Kaku有本很有意思的书<em>《不可思议的物理》</em>, 其中专门讨论那些意想天开, 不着边际的物理想法. 这些想法很多都是科幻小说中的幻想. Kaku在书中将这些不可思议的想法分为三等. 等级越高, 越难实现. 其中, 超越光速被归为第二等不可思议.</p>
+
+<p>有两种方案可以实现超越光速. 第一种办法地球人都知道: 虫洞. 当你通过奇异的物质(负压强)将时空撕裂, 在粘结在一起, 你就有了一个虫洞. 它就像是通往异界之门, 穿越它, 你已身在百万光年之外！中国人再怎么吹轻功的牛, 也不敢想像这样的速度！与它相比, 高铁就是废铁, 当然还能废人.</p>
+
+<p>第二种方案就是我们现在要说的<strong>Alcubierre Drive</strong><sup id='fnref:2'><a href='#fn:2' rel='footnote'>2</a></sup>. 1994年墨西哥物理学家受著名的科幻剧《Star Terk》的影响, 认真考虑是否存在一种<strong>Warp engine</strong>, 在<em>Class.Quantum Grav.</em>上发表文章<a href='http://iopscience.iop.org/0264-9381/11/5/001/'>The warp drive: hyper-fast travel within general relativity</a>提出一种度规, 实现时空扭曲, 达到能以任意速度飞行的效果.</p>
+
+<p>下面摘自Kaku<em>《不可思议的物理》</em>:</p>
+<hr />
+<blockquote>
+<p>Alcubierre承认《Star Terk》或许为他获得这个解起了一定作用. “《Star Terk》中的人们一直在谈论&gt;着曲速引擎, 一种使空间变形的概念. ”他说, “我们已经拥有了一种关于空间怎样能够或者不能够被扭曲的理&gt;论, 那就是广义相对论. 我认为应当会有一种方法能使用这些概念解释曲速引擎如何运转. ”“我的猜测是, 在&gt;飞船中的人可能会看到和《Star Terk》中十分相像的场景. 在飞船前面, 星星们变成了长长的线条. 在飞船&gt;后面, 他们什么都看不到——只有黑暗——因为星光无法移动的足够快以赶上飞船. ”</p>
+</blockquote>
+<hr />
+<p>Alcubierre的推导方式是反着来的, 先考虑一个度规, 描述飞船沿着一个任意时间函数 \(x_{s}(t)\) 移动:</p>
+
+<p>$$ ds^{2}=-dt^{2}+(dx-v_{s}f(r_{s})dt)^{2}+dy^{2}+dz^{2}$$</p>
+
+<p>其中\(v_{s}(t)=\frac{dx_{s}(t)}{dt}\), \(r_{s}(t)=((x-x_{s})^{2}+y^{2}+z^{2})^{1/2}\), 当\(r_{s}\in \{-R,R\}\)时, \(f(r_{s})=1\)；其它情况\(f(r_{s})=0\). R 略大于飞船的半径. 很明显在无穷远处这个度规是平坦<em>Minkowski</em>度规. 而在飞船内, 空间也是平坦的. 时空的扭曲发生在非常的周围, 即函数\(f(r_{s})\)变化的地方. 实际上这个函数仅仅是近似突变的, 你可以用余切函数的组合取极限得到这样的性质. 因此, 在飞船周围空间扭曲的非常厉害, 实际上飞船前方的空间被压缩, 而后面的空间被拉长, 这样似乎不是飞船在动, 而是空间在扭曲流过飞船. 在离飞船非常远的人看来, 飞船的速度超过光速了, 实际上这是一种表观超光速, 正如在宇宙暴涨时期, 两个区域的分离速度远远超过了光速, 但是定域速度并未超过光速.</p>
+
+<p>如果你从这个度规反过来计算<em>Einstein</em>张量, 这样你就通过场方程知道了相应的能动张量, 也就知道了要产生这样的时空扭曲需要什么样的物质. 简单计算表明: $$T^{00}=-\frac{1}{8\pi}\frac{v_{s}^{2}\rho^{2}}{4r_{c}^{2}}(\frac{df}{dr_{s}})^{2}$$ 它是恒负, 即负能量的物质才能产生这样的时空弯曲. 此时所有的能量条件都被违反, 这和虫洞遇到的情况一样. 超光速是有代价的, 你必须找到负压强的物质. 我们已知的所有能量的形式不是这样的, 但有例外, 那就是<strong>Casimir</strong>能量. <strong>Casimir</strong>能量是一种真空涨落的量子效应, 它是负压强的, 而且被实验观测证实. 更为有意思的是, 当今宇宙观测发现在整个宇宙的尺度内, 是&#8221;万有斥力&#8221;, 而人们发现只有负压强的能量才能产生这种效应, 这就是暗能量. 关于暗能量人们提出了大量的唯像模型, 可谓千奇百怪, 但它到底是什么, 我们依然一无所知. 也许未来将真的发现这种奇异的能量, 届时超光速将变得可行.</p>
+
+<p>关于<em>Alcubierre Deriver</em>, 如果你想知道的更详细, 你可以看Alcubierre的原始文章. 它只有五页, 简单明了. 如果你看不到这篇文章, 你可以看<em>J.Hartle</em>的教科书《Gravition》, 上面有简要的介绍.</p>
+
+<p>今天有好事者在<em>arXiv</em>上贴出文章<a href='http://arxiv.org/abs/1107.5650'>Detailed study of null and time-like geodesics in the Alcubierre Warp spacetime</a>, 讨论如果这样一艘飞船飞过天空, 背景星光如何被飞船扭曲. 文章在<a href='http://www.vis.uni-stuttgart.de/~muelleta/Warp/'>网站</a>上给出了演示视频, 并且通过浏览器内嵌Java语言给出了交互程序使你能计算对应角度的光线弯曲. 仔细看看吧, 这样某天晚上, 当你仰望苍穹, 忽然发现满天星相出现了你看到过的扭曲, 你就会说: “哦, 原来Alcubierre 曲速引擎真的存在. ”这时我的建议是, 别再卖弄了, 外星人来殖民了, 兄弟快跑吧！</p>
+<div class='footnotes'><hr /><ol><li id='fn:1'>
+<p>该文写于一年前.</p>
+<a href='#fnref:1' rev='footnote'>&#8617;</a></li><li id='fn:2'>
+<p>中文译为曲速引擎. 如果你看过《Star Terk》(星际迷航), 你会听到柯克船长经常喊: 进入曲速飞行！然后飞船“砰”的一声射出, 星光都被甩在后面了.</p>
+<a href='#fnref:2' rev='footnote'>&#8617;</a></li></ol></div>
+</div>
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>07 Oct 2012</span> &raquo; <a href="/2012/10/07/about-blog.html">关于博客</a></li>
+    
+      <li><span>12 Apr 2012</span> &raquo; <a href="/2012/04/12/Monte-method-Pi.html">Monte Method Pi</a></li>
+    
+      <li><span>23 Jun 2011</span> &raquo; <a href="/2011/06/23/Search-Higgs-Boson.html">Search Higgs Boson</a></li>
+    
+  </ul>
+  
+</div>
+   <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'yangbinhorizon'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+
+  
+  <div class="footer">
+    <div class="contact">
+      <p>
+        This site is powered
+        by <a href="https://github.com/mojombo/jekyll">Jekyll</a> at <a href="https://github.com/">Git</a> and
+        edited
+        with <a href="http://www.gnu.org/software/emacs/">Emacs</a> by <a href="mailto:yangbdy@gmail.com">YangBin.</a><br />
+        
+      </p>
+    </div>
+
+<!--     <div class="rss">
+      <a href="http://feeds.yangbin.tk/">
+        <img src="/images/rss.png" alt="Subscribe to RSS Feed" />
+      </a>
+    </div>
+-->
+  </div>
+</div>
+
+
+<!-- ClickTale Bottom part -->
+<div id="ClickTaleDiv" style="display: none;"></div>
+<script type="text/javascript">
+if(document.location.protocol!='https:')
+  document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
+</script>
+<!-- ClickTale end of Bottom part -->
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6016902-1");
+pageTracker._trackPageview();
+</script>
+<!-- Google Analytics end -->
+
+</body>
+</html>
