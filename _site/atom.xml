@@ -4,7 +4,7 @@
  <title>YangBin</title>
  <link href="http://yangbin.tk/atom.xml" rel="self"/>
  <link href="http://yangbin.tk/"/>
- <updated>2012-11-04T21:59:56+08:00</updated>
+ <updated>2012-11-05T23:15:40+08:00</updated>
  <id>http://yangbin.tk/</id>
  <author>
    <name>YangBin</name>
@@ -62,7 +62,7 @@
    <link href="http://yangbin.tk/2012/10/07/about-blog.html"/>
    <updated>2012-10-07T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2012/10/07/about-blog</id>
-   <content type="html">&lt;h1 id='id110'&gt;关于博客&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id5'&gt;关于博客&lt;/h1&gt;
 
 &lt;p&gt;之前一直在使用wordpress, 那是个非常漂亮的博客程序, 可以做出非常漂亮的效果, 比如&lt;em&gt;科学松鼠会&lt;/em&gt;就是用它写的. 几个月之前我看到阮一峰写的&lt;a href='http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html'&gt;搭建一个免费的，无限流量的Blog&amp;#8212;-github&lt;/a&gt;, 当时非常感兴趣, 但是那时忙着毕业, 忙着找工作, 腾不出时间, 再者觉得作为个人博客来说wordpress足够了, 于是就放下折腾的心, 没有在git上建博客.&lt;/p&gt;
 
@@ -515,7 +515,7 @@ Ulam是个传奇人物。他是波兰天才数学家，少年时研究集合拓�
    <link href="http://yangbin.tk/2011/07/24/time-machine.html"/>
    <updated>2011-07-24T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2011/07/24/time-machine</id>
-   <content type="html">&lt;h1 id='id109'&gt;时间机器&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id4'&gt;时间机器&lt;/h1&gt;
 
 &lt;p&gt;没有比时间更神秘的概念了. 童年时代, 你并不知道什么是时间, 只是感到日升月落, 昼夜交替. 忽然之间你发现你本身在不断的变化, 你在变高, 周围的一切都在变化. 你意识到一定有一个普遍的东西在增长, 它不受外界的影响, 就像永不停止的江流, 昼夜不息. 这便是你领悟的“时间”概念. 夫子云：逝者如斯夫.&lt;/p&gt;
 
@@ -561,7 +561,7 @@ Ulam是个传奇人物。他是波兰天才数学家，少年时研究集合拓�
    <link href="http://yangbin.tk/2011/07/04/grothendieck.html"/>
    <updated>2011-07-04T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2011/07/04/grothendieck</id>
-   <content type="html">&lt;h1 id='id108'&gt;孤独和创造力&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id3'&gt;孤独和创造力&lt;/h1&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;他们必须重新发现自身的那种与生俱来的, 和我一样的能力：忍受孤独.&lt;/em&gt; &amp;#8211; &lt;em&gt;Grothendieck&lt;/em&gt;&lt;/p&gt;
@@ -1161,7 +1161,7 @@ LEP通过Higgs–strahlung 过程：
    <link href="http://yangbin.tk/2011/06/18/gauge-gravity.html"/>
    <updated>2011-06-18T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2011/06/18/gauge-gravity</id>
-   <content type="html">&lt;h1 id='id107'&gt;规范引力&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id2'&gt;规范引力&lt;/h1&gt;
 
 &lt;p&gt;四种基本相互作用中有三种都可以看作是规范场, 那么引力能否看作是规范场？&lt;/p&gt;
 
@@ -1191,7 +1191,7 @@ LEP通过Higgs–strahlung 过程：
    <link href="http://yangbin.tk/2011/06/12/spin-gravity.html"/>
    <updated>2011-06-12T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2011/06/12/spin-gravity</id>
-   <content type="html">&lt;h1 id='id106'&gt;自旋引力相互作用&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id1'&gt;自旋引力相互作用&lt;/h1&gt;
 
 &lt;p&gt;两个费米子之间除了磁相互作用, 是否还有自旋引起的引力相互作用？&lt;/p&gt;
 
