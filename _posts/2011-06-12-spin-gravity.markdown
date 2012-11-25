@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spin Gravity
+category: physics
 ---
 
 # 自旋引力相互作用

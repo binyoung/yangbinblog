@@ -17,7 +17,7 @@ html, body {
 
 body {
   background-color: #aaa;
-  font-family: "Microsoft YaHei", "minion-pro-1", "minion-pro-2", Palatino, Georgia, "Times New Roman", serif, helvetica, arial, clean, sans-serif;
+  font-family: Georgia, "Microsoft YaHei", "minion-pro-1", "minion-pro-2", Palatino, "Times New Roman", serif, helvetica, arial, clean, sans-serif;
   font-size: normal;
   text-align: center;
 }
