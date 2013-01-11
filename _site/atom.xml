@@ -4,13 +4,23 @@
  <title>YangBin</title>
  <link href="http://yangbin.tk/atom.xml" rel="self"/>
  <link href="http://yangbin.tk/"/>
- <updated>2012-11-08T22:32:16+08:00</updated>
+ <updated>2013-01-11T22:04:11+08:00</updated>
  <id>http://yangbin.tk/</id>
  <author>
    <name>YangBin</name>
    <email>yangbdy@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>宿命</title>
+   <link href="http://yangbin.tk/2013/01/15/test.html"/>
+   <updated>2013-01-15T00:00:00+08:00</updated>
+   <id>http://yangbin.tk/2013/01/15/test</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;“ 月亮在自己的轨道上运行的时候一定以为自己是自由的. ” ———— 爱因斯坦&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;很少有人相信宿命.&lt;br /&gt; 不相信是有理由的.&lt;br /&gt;每个人在一生中都要做很多次选择. 每次选择都是由自己决定的. 这样看来我们是自由的, 这个世界并不存在宿命.&lt;br /&gt; 在佛教看来, 沉沦在欲界天里的俗人都有各自的宿命. 每个人前生的因决定了其今生的果. 因果循环, 报应不爽. 宿命意味着每个人生下来其人生的轨迹就确定了. 更进一步说就是&amp;lt;终结者&amp;gt;中的那句著名台词：未来已经发生, 只是你没感觉到.&lt;br /&gt; 明朝灭亡的时候, 牛顿诞生了. 他是一个真正的集大成者, 古典力学理论在牛顿手中最终完成, 原来不可企及的天体也在牛顿的万有引力下驯服了. 牛顿之后, 拉格朗日创立了分析力学. 分析力学超出了牛顿所用的笛卡儿坐标, 它引入了广义坐标. 就如同牛顿原来只用剑, 而到了拉格朗日则飞花落叶皆可伤人！分析力学的威力是惊人的, 任何系统只要给定一个拉格朗日函数, 那么这个系统的演化就可以用一组关于时间的二阶微分方程描述. 解这组微分方程就能知道这个系统未来的一切. 任何学过微积分的人都知道, 解关于时间二阶微分方程要知道初始条件(简单点说就是系统的初始位置和速度), 只要给出系统的初始条件, 那这个系统的未来就决定了.&lt;br /&gt; 如果你把宇宙作为考虑的力学系统, 那么你会明白拉普拉斯(Laplace)说的话:“我们可以把宇宙现在的状态视为其过去的果以及未来的因. 如果有一个智慧能知道某一刻所有自然运动的力和所有自然构成的物体的位置, 假如他也能够对这些数据进行分析, 那宇宙里最大的物体到最小的粒子的运动都会包含在一条简单公式中. 对于这智慧来说没有事物会是含糊的, 而未来只会像过去般出现在他面前.”&lt;br /&gt; 这个智慧就是著名的&lt;strong&gt;拉普拉斯之妖&lt;/strong&gt;, 物理学中两个赫赫有名的妖之一. 人是不可能知道宇宙的初始条件的, 只能是妖了. 拉普拉斯之妖横行一时, 无人能降. 拉普拉斯结论的推广就引出了机械论哲学. 即宇宙就像一部机器, 一切都是决定的, 没有任何自由意志的存身之地. 更有意思的是牛顿力学是没有时间方向的, 过去和未来是一样的, 因为分析力学的动力学方程对时间是对称的. 在这个意义上时间不过是一种幻觉.&lt;br /&gt; 1955年3月21日Einstein在一封纪念挚友Besso的信中写道:“Michele早我一步离开了这个奇怪的世界. 这是无关紧要的. 就我们这些受人信任的物理学家而言, 过去, 现在和将来之间的区别只是一种幻觉, 然而, 这种区别依然存在.”&lt;br /&gt; Einstein笃信Spinoza的上帝. Spinoza的上帝即自然. 按Spinoza的意见, 一切事物都受着一种绝对的逻辑必然性支配. 在精神领域中既没有所谓自由意志, 在物质界也没有什么偶然.&lt;br /&gt; 给时间以方向的人是Boltzmann. 他在1872年提出著名的H定理, 这个定理说明尽管微观粒子服从时间对称的牛顿力学, 但是宏观系统是有时间方向的, 这就是著名的热力学时间箭头. 但是这个定理遭到强烈的质疑和谴责. 一代数学大师Poincare证明了初态复现定理, 即只要等待足够长的时间, 宏观系统会回到它的初始态. 这就是&lt;em&gt;轮回&lt;/em&gt;了. 这有点像Bernoulli那句名言:&lt;em&gt;经管一变再变, 我仍将重现！&lt;/em&gt; &lt;br /&gt; Poincare写道：“按照这一理论, 看见热从较冷的物体流向较热的物体无须不着边际地幻想, 不必有超人的智能, 也不必有Maxwell之妖的机敏；只需要一点点耐心足矣！”&lt;br /&gt; 从Poincare的话中可以看出, 热力学时间箭头又不存在了. 但是Poincare兄的一点点耐心是让我们等多久呢? 计算表明, 你要等比宇宙年龄还长的时间才能看到一个宏观系统重现它的初始态！&lt;br /&gt; 然而真正把拉普拉斯之妖装入瓶子的却正是Poincare. Poincare在研究三体问题是发现了一个诡异的现象：不管你把初始条件的误差取得多么小, 随着时间的演化这个误差都会被放大到不可预测！而上世纪最不可思议的人类智慧的杰作——量子力学表明, 初始条件的选取不能绝对精确, 它有一个最小的误差, 这是自然的本性, 是不能被超越的. 这即表明即使是拉普拉斯之妖也不能得到绝对精确的初始条件, 更不能预测宇宙的将来！拉普拉斯之妖在Poincare和Heisenberg的联手下被封入了瓶子.&lt;br /&gt; 但这并不表明决定论哲学也一同消失了. &lt;br /&gt; 量子力学明确地引入了几率, 在量子力学中对一个系统未来的预测只能是几率形式的:你只能说系统在未来有多少可能是这样的或那样的, 而无法精确决定. 但是量子力学是通过观测者引入几率的. 量子力学的系统演化方程也是确定的, 只要你知道初始条件, 你就能知道系统在未来的一切, 但演化方程只告诉你几率幅, 几率幅当然不是几率了, 它是一个非常精妙的概念, 只有当你对一个系统观测时, 几率才出现, 正是你的观测影响了系统, 系统在你测量的瞬间坍塌到你的状态中去了, 几率也出现了. 对笃信因果性的Einstein来说, 系统要坍塌到观测者的状态总是有原因的, 只要有原因就应该能用物理学分析, 从而消除掉这个坍塌过程的偶然性！但是这是做不到的, 这是量子力学最为微妙之处！这点引起了无数的争论, 引发了一系列论战, 至今未绝！ 爱因斯坦说:我不相信上帝会掷骰子. 在给好友M.Born的信中Einstein写道：我不想轻易放弃严格的因果性. 我不能容忍这样的想法:受到一束光照射的一个电子, 会由它自己的自由意志来选择它想要跳开的时刻和方向. 如果是那样, 我宁可做个补鞋匠或者甚至赌馆里的一名佣人, 都比当个物理学家强.&lt;br /&gt; 爱因斯坦在给泰戈尔写的信中说:我相信月亮在自己的轨道上运行的时候一定以为自己是自由的.&lt;br /&gt; 早在两千年前孔子就说:五十而知天命.&lt;br /&gt; 每个人在每时每刻都感到自己是自由的, 而当五十岁时, 或者是大限将至时, 回想自己的一生, 却悲哀的发现自己的一生只是一条轨迹, 而在轨迹的每一点自己都只有唯一的选择. 就好像轨道上的月亮一样. 这条轨迹就是孔子所说的天命. 也就是每个人的宿命.&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>超越光速——Alcubierre drive</title>
@@ -62,7 +72,7 @@
    <link href="http://yangbin.tk/2012/10/07/about-blog.html"/>
    <updated>2012-10-07T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2012/10/07/about-blog</id>
-   <content type="html">&lt;h1 id='id50'&gt;关于博客&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id155'&gt;关于博客&lt;/h1&gt;
 
 &lt;p&gt;之前一直在使用wordpress, 那是个非常漂亮的博客程序, 可以做出非常漂亮的效果, 比如&lt;em&gt;科学松鼠会&lt;/em&gt;就是用它写的. 几个月之前我看到阮一峰写的&lt;a href='http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html'&gt;搭建一个免费的，无限流量的Blog&amp;#8212;-github&lt;/a&gt;, 当时非常感兴趣, 但是那时忙着毕业, 忙着找工作, 腾不出时间, 再者觉得作为个人博客来说wordpress足够了, 于是就放下折腾的心, 没有在git上建博客.&lt;/p&gt;
 
@@ -487,6 +497,347 @@ Ulam是个传奇人物。他是波兰天才数学家，少年时研究集合拓�
  </entry>
  
  <entry>
+   <title>Selfpower</title>
+   <link href="http://yangbin.tk/2012/03/25/selfpower.html"/>
+   <updated>2012-03-25T00:00:00+08:00</updated>
+   <id>http://yangbin.tk/2012/03/25/selfpower</id>
+   <content type="html">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+               &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+lang=&quot;en&quot; xml:lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;title&gt;几种脚本语言速度比较&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;/&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;Org-mode&quot;/&gt;
+&lt;meta name=&quot;generated&quot; content=&quot;[2012-04-06 五 21:43]&quot;/&gt;
+&lt;meta name=&quot;author&quot; content=&quot;杨彬&quot;/&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&quot;/&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot;/&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+ &lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]&gt;*/--&gt;
+&lt;/style&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = &quot;code-highlighted&quot;;
+     elem.className   = &quot;code-highlighted&quot;;
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]&gt;*///--&gt;
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://orgmode.org/mathjax/MathJax.js&quot;&gt;
+&lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: [&quot;MMLorHTML.js&quot;], jax: [&quot;input/TeX&quot;],
+            jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+        extensions: [&quot;tex2jax.js&quot;,&quot;TeX/AMSmath.js&quot;,&quot;TeX/AMSsymbols.js&quot;,
+                     &quot;TeX/noUndefined.js&quot;],
+        tex2jax: {
+            inlineMath: [ [&quot;\\(&quot;,&quot;\\)&quot;] ],
+            displayMath: [ ['$$','$$'], [&quot;\\[&quot;,&quot;\\]&quot;] ],
+            skipTags: [&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;],
+            ignoreClass: &quot;tex2jax_ignore&quot;,
+            processEscapes: false,
+            processEnvironments: true,
+            preview: &quot;TeX&quot;
+        },
+        showProcessingMessages: true,
+        displayAlign: &quot;center&quot;,
+        displayIndent: &quot;2em&quot;,
+
+        &quot;HTML-CSS&quot;: {
+             scale: 100,
+             availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;],
+             preferredFont: &quot;TeX&quot;,
+             webFont: &quot;TeX&quot;,
+             imageFont: &quot;TeX&quot;,
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    &quot;MML&quot;,
+                 Firefox: &quot;MML&quot;,
+                 Opera:   &quot;HTML&quot;,
+                 other:   &quot;HTML&quot;
+             }
+        }
+    });
+/*]]&gt;*///--&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;content&quot;&gt;
+
+&lt;h1 class=&quot;title&quot;&gt;几种脚本语言速度比较&lt;/h1&gt;
+
+&lt;p&gt;我想试试Lisp, Python, awk这些语言那个最快.
+&lt;/p&gt;
+&lt;p&gt;
+自幂数定义如下: $$! a^{n}+b^{n}+\dots+x^{n}=ab\dots x$$
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;Lisp的代码:&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+
+
+
+
+&lt;pre class=&quot;src src-lisp&quot;&gt;(&lt;span style=&quot;color: #ff0000;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #a020f0;&quot;&gt;nar&lt;/span&gt; (number)
+      (&lt;span style=&quot;color: #ff0000;&quot;&gt;let&lt;/span&gt; ((numlen (spn number))
+              (smq 0)
+              (num number) (k 0))
+         (&lt;span style=&quot;color: #ff0000;&quot;&gt;dotimes&lt;/span&gt; (i numlen)
+                        (setf k (mod num 10)
+                                smq (+ smq (expt k numlen))
+                                num (floor (/ num 10.0))))
+         (= number smq)))
+(time (&lt;span style=&quot;color: #ff0000;&quot;&gt;do&lt;/span&gt; ((p (selfNms 150) (selfNms (1+ p))))
+         ((&lt;span style=&quot;color: #ffff00;&quot;&gt;&amp;amp;gt&lt;/span&gt;&lt;span style=&quot;color: #696969;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;color: #696969;&quot;&gt;p 1000000))
+&lt;/span&gt;       (format t &lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;~d  &quot;&lt;/span&gt; p)))
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+得承认，我这个Lisp的代码写的太烂了。或许就是这个原因影响了它的速度。
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;Python的代码:&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+
+
+
+
+
+&lt;pre class=&quot;src src-PYTHON&quot;&gt;- coding: utf-8 -
+def shuxian(nu):
+    if nu &amp;amp;lt; 150:
+        return False
+    else:
+        idx = len(str(nu))
+        shu = 0
+        m = nu
+        while m &amp;amp;gt; 0:
+            k = m%10
+            shu += (k ** idx)
+            m=m/10
+    if shu!=nu:
+        return False
+    else:
+        return True
+
+import time 
+
+begin = time.time()
+print [x for x in range(1000000) if shuxian(x)]
+print &lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;&amp;#29992;&amp;#26102;:%s&amp;#31186;&quot;&lt;/span&gt;%(time.time()-begin)
+&lt;/pre&gt;
+
+
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-3&quot;&gt;awk的代码:&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
+
+
+
+
+
+&lt;pre class=&quot;src src-awk&quot;&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;function&lt;/span&gt; &lt;span style=&quot;color: #a020f0;&quot;&gt;ispn&lt;/span&gt;(x)
+{
+    x = &lt;span style=&quot;color: #0000ff;&quot;&gt;int&lt;/span&gt;(x)
+    nl = &lt;span style=&quot;color: #0000ff;&quot;&gt;int&lt;/span&gt;(&lt;span style=&quot;color: #0000ff;&quot;&gt;log&lt;/span&gt;(x)/&lt;span style=&quot;color: #0000ff;&quot;&gt;log&lt;/span&gt;(10))+1
+    n = x
+    s = 0
+    &lt;span style=&quot;color: #ff0000;&quot;&gt;while&lt;/span&gt; (n &amp;amp;gt; 0)
+    {
+        k = n%10
+        s += k**nl
+        n = &lt;span style=&quot;color: #0000ff;&quot;&gt;int&lt;/span&gt;(n/10)
+    }
+    &lt;span style=&quot;color: #ff0000;&quot;&gt;if&lt;/span&gt; (s == x)
+        &lt;span style=&quot;color: #ff0000;&quot;&gt;return&lt;/span&gt; (x)
+    &lt;span style=&quot;color: #ff0000;&quot;&gt;else&lt;/span&gt;
+        &lt;span style=&quot;color: #ff0000;&quot;&gt;return&lt;/span&gt; 0
+}
+{
+    &lt;span style=&quot;color: #ff0000;&quot;&gt;for&lt;/span&gt; ( y = $1; y &amp;amp;lt;= $2; y++)
+        &lt;span style=&quot;color: #ff0000;&quot;&gt;if&lt;/span&gt; (ispn(y)!=0)
+        {
+            g = ispn(y)
+            &lt;span style=&quot;color: #0000ff;&quot;&gt;print&lt;/span&gt; g
+        }
+}
+
+time echo 150 1000000 | awk -f /tmp/test.awk
+&lt;/pre&gt;
+
+
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-4&quot;&gt;C语言的代码:&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-4&quot;&gt;
+
+
+
+
+
+&lt;pre class=&quot;src src-c&quot;&gt;&lt;span style=&quot;color: #0000ff;&quot;&gt;#include&lt;/span&gt; &lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;stdio.h&quot;&lt;/span&gt;
+&lt;span style=&quot;color: #0000ff;&quot;&gt;#include&lt;/span&gt; &lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;math.h&quot;&lt;/span&gt;
+&lt;span style=&quot;color: #0000ff;&quot;&gt;#include&lt;/span&gt; &lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;time.h&quot;&lt;/span&gt;
+&lt;span style=&quot;color: #ffff00;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a020f0;&quot;&gt;main&lt;/span&gt;()
+{
+  &lt;span style=&quot;color: #ffff00;&quot;&gt;unsigned&lt;/span&gt; &lt;span style=&quot;color: #ffff00;&quot;&gt;long&lt;/span&gt; &lt;span style=&quot;color: #ee82ee;&quot;&gt;fr&lt;/span&gt;,&lt;span style=&quot;color: #ee82ee;&quot;&gt;to&lt;/span&gt;,&lt;span style=&quot;color: #ee82ee;&quot;&gt;n&lt;/span&gt;,&lt;span style=&quot;color: #ee82ee;&quot;&gt;m&lt;/span&gt;,&lt;span style=&quot;color: #ee82ee;&quot;&gt;k&lt;/span&gt;,&lt;span style=&quot;color: #ee82ee;&quot;&gt;sum&lt;/span&gt;;
+  &lt;span style=&quot;color: #ffff00;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #ee82ee;&quot;&gt;nLog&lt;/span&gt;,&lt;span style=&quot;color: #ee82ee;&quot;&gt;numlen&lt;/span&gt;,&lt;span style=&quot;color: #ee82ee;&quot;&gt;brPoint&lt;/span&gt; = 1;
+  printf(&lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;Input Number Range ('from' 'to'):&quot;&lt;/span&gt;);
+  scanf(&lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;%lu %lu&quot;&lt;/span&gt;,&amp;amp;amp;fr,&amp;amp;amp;to);
+  &lt;span style=&quot;color: #ffff00;&quot;&gt;float&lt;/span&gt; &lt;span style=&quot;color: #ee82ee;&quot;&gt;c_start&lt;/span&gt;,&lt;span style=&quot;color: #ee82ee;&quot;&gt;c_end&lt;/span&gt;;
+  c&amp;lt;em&amp;gt;start = clock();
+  &lt;span style=&quot;color: #ff0000;&quot;&gt;for&lt;/span&gt;(n=fr;n &amp;amp;lt;= to;n++)
+    {
+      nLog = log10(n);
+      numlen = floor(nLog)+1;
+      m=n;
+      sum=0;
+      &lt;span style=&quot;color: #ff0000;&quot;&gt;while&lt;/span&gt;(m&amp;amp;gt;0)
+        {
+          k=m % 10;
+          sum += pow(k,numlen);
+          m= m/10;
+        }
+     &lt;span style=&quot;color: #ff0000;&quot;&gt;if&lt;/span&gt;(sum==n)
+       {
+         printf(&lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;%12lu&quot;&lt;/span&gt;,n);
+         &lt;span style=&quot;color: #ff0000;&quot;&gt;if&lt;/span&gt;(brPoint%5==0)
+           {printf(&lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;\n&quot;&lt;/span&gt;);
+             brPoint = 0;
+           }
+         brPoint++;
+       }
+    }
+  printf(&lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;\n&quot;&lt;/span&gt;);
+  c_end =clock();
+  printf(&lt;span style=&quot;color: #00ffff;&quot;&gt;&quot;Usage time = %fs.\n&quot;&lt;/span&gt;,difftime(c_end,c_start)/CLOCKS_PER_SEC);
+  &lt;span style=&quot;color: #ff0000;&quot;&gt;return&lt;/span&gt; 0;
+}
+&lt;/pre&gt;
+
+
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-5&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-5&quot;&gt;结果:&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-5&quot;&gt;
+
+&lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
+&lt;a name=&quot;tbl:CPU times&quot; id=&quot;tbl:CPU times&quot;&gt;&lt;/a&gt;
+&lt;caption&gt;计算150-1000000间自幂数耗时比较&lt;/caption&gt;
+&lt;colgroup&gt;&lt;col class=&quot;left&quot; /&gt;&lt;col class=&quot;right&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th scope=&quot;col&quot; class=&quot;left&quot;&gt;语言&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;right&quot;&gt;耗时 (秒)&lt;/th&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td class=&quot;left&quot;&gt;c&lt;/td&gt;&lt;td class=&quot;right&quot;&gt;0.560000&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td class=&quot;left&quot;&gt;python&lt;/td&gt;&lt;td class=&quot;right&quot;&gt;1.87891507149&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td class=&quot;left&quot;&gt;Lisp&lt;/td&gt;&lt;td class=&quot;right&quot;&gt;2.450000&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td class=&quot;left&quot;&gt;awk&lt;/td&gt;&lt;td class=&quot;right&quot;&gt;2.982000&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;postamble&quot;&gt;
+&lt;p class=&quot;author&quot;&gt; Author: 杨彬
+&lt;/p&gt;
+&lt;p class=&quot;date&quot;&gt; Date: [2012-04-06 五 21:43]&lt;/p&gt;
+&lt;p class=&quot;creator&quot;&gt;HTML generated by org-mode 7.4 in emacs 23&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Parallel Universes</title>
    <link href="http://yangbin.tk/2011/07/25/parallel-universes.html"/>
    <updated>2011-07-25T00:00:00+08:00</updated>
@@ -515,7 +866,7 @@ Ulam是个传奇人物。他是波兰天才数学家，少年时研究集合拓�
    <link href="http://yangbin.tk/2011/07/24/time-machine.html"/>
    <updated>2011-07-24T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2011/07/24/time-machine</id>
-   <content type="html">&lt;h1 id='id49'&gt;时间机器&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id154'&gt;时间机器&lt;/h1&gt;
 
 &lt;p&gt;没有比时间更神秘的概念了. 童年时代, 你并不知道什么是时间, 只是感到日升月落, 昼夜交替. 忽然之间你发现你本身在不断的变化, 你在变高, 周围的一切都在变化. 你意识到一定有一个普遍的东西在增长, 它不受外界的影响, 就像永不停止的江流, 昼夜不息. 这便是你领悟的“时间”概念. 夫子云：逝者如斯夫.&lt;/p&gt;
 
@@ -561,7 +912,7 @@ Ulam是个传奇人物。他是波兰天才数学家，少年时研究集合拓�
    <link href="http://yangbin.tk/2011/07/04/grothendieck.html"/>
    <updated>2011-07-04T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2011/07/04/grothendieck</id>
-   <content type="html">&lt;h1 id='id48'&gt;孤独和创造力&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id153'&gt;孤独和创造力&lt;/h1&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;他们必须重新发现自身的那种与生俱来的, 和我一样的能力：忍受孤独.&lt;/em&gt; &amp;#8211; &lt;em&gt;Grothendieck&lt;/em&gt;&lt;/p&gt;
@@ -1161,7 +1512,7 @@ LEP通过Higgs–strahlung 过程：
    <link href="http://yangbin.tk/2011/06/18/gauge-gravity.html"/>
    <updated>2011-06-18T00:00:00+08:00</updated>
    <id>http://yangbin.tk/2011/06/18/gauge-gravity</id>
-   <content type="html">&lt;h1 id='id47'&gt;规范引力&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id152'&gt;规范引力&lt;/h1&gt;
 
 &lt;p&gt;四种基本相互作用中有三种都可以看作是规范场, 那么引力能否看作是规范场？&lt;/p&gt;
 
@@ -1191,7 +1542,7 @@ LEP通过Higgs–strahlung 过程：
    <link href="http://yangbin.tk/physics/2011/06/12/spin-gravity.html"/>
    <updated>2011-06-12T00:00:00+08:00</updated>
    <id>http://yangbin.tk/physics/2011/06/12/spin-gravity</id>
-   <content type="html">&lt;h1 id='id46'&gt;自旋引力相互作用&lt;/h1&gt;
+   <content type="html">&lt;h1 id='id151'&gt;自旋引力相互作用&lt;/h1&gt;
 
 &lt;p&gt;两个费米子之间除了磁相互作用, 是否还有自旋引起的引力相互作用？&lt;/p&gt;
 
